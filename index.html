@@ -1496,8 +1496,18 @@
     ],
     "answer": "a",
     "explanation": "Deforestation reduces the number of trees that absorb carbon dioxide, increasing atmospheric levels."
+  },
+  {
+    "question": "What type of reaction occurs when an acid reacts with a carbonate?",
+    "options": [
+      "a) Neutralization",
+      "b) Combustion",
+      "c) Precipitation",
+      "d) Decomposition"
+    ],
+    "answer": "a",
+    "explanation": "The reaction between an acid and a carbonate is a type of neutralization reaction."
   }
-
 ];
 
         // Function to load a new question
@@ -1509,12 +1519,11 @@
 
             const answerButtons = document.querySelectorAll('.answer-button');
             answerButtons.forEach((btn, index) => {
-                const optionKey = Object.keys(questionData.options)[index];
-                const optionValue = Object.values(questionData.options)[index];
-                btn.innerText = `${optionKey}: ${optionValue}`;
+                const optionLetter = String.fromCharCode(97 + index); // 'a', 'b', 'c', 'd'
+                btn.innerText = `${optionLetter}) ${questionData.options[index]}`;
                 btn.disabled = false;
                 btn.onclick = function() {
-                    checkAnswer(optionKey, questionData);
+                    checkAnswer(optionLetter, questionData);
                 };
             });
 
@@ -1524,10 +1533,10 @@
 
         // Function to check the selected answer
         function checkAnswer(selected, questionData) {
-            if (selected === questionData.correct) {
+            if (selected === questionData.answer) {
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
             } else {
-                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.answer + ". " + questionData.explanation;
             }
 
             // Disable buttons after selection
