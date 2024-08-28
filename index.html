@@ -1,56 +1,100 @@
-// Array of questions, answers, and explanations
-const quiz = [
-    {
-        question: "What is the capital of France?",
-        options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
-        correct: "C",
-        explanation: "Paris is the capital city of France."
-    },
-    {
-        question: "What is the largest planet in our solar system?",
-        options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
-        correct: "B",
-        explanation: "Jupiter is the largest planet in our solar system."
-    }
-    // Add more questions here
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        /* Basic styling for the quiz */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 16px;
+        }
+        #next-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div id="question-container">
+        <p id="question"></p>
+        <!-- Answer buttons -->
+        <button class="answer-button">A</button>
+        <button class="answer-button">B</button>
+        <button class="answer-button">C</button>
+        <button class="answer-button">D</button>
+        <!-- Feedback and Next Question button -->
+        <p id="feedback"></p>
+        <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+    </div>
 
-// Function to load a new question
-function loadQuestion() {
-    const randomIndex = Math.floor(Math.random() * quiz.length);
-    const questionData = quiz[randomIndex];
+    <script>
+        // Array of questions, answers, and explanations
+        const quiz = [
+            {
+                question: "What is the capital of France?",
+                options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
+                correct: "C",
+                explanation: "Paris is the capital city of France."
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
+                correct: "B",
+                explanation: "Jupiter is the largest planet in our solar system."
+            }
+            // Add more questions here
+        ];
 
-    document.getElementById('question').innerText = questionData.question;
+        // Function to load a new question
+        function loadQuestion() {
+            const randomIndex = Math.floor(Math.random() * quiz.length);
+            const questionData = quiz[randomIndex];
 
-    const answerButtons = document.querySelectorAll('.answer-button');
-    answerButtons.forEach((btn, index) => {
-        const optionKey = Object.keys(questionData.options)[index];
-        const optionValue = Object.values(questionData.options)[index];
-        btn.innerText = `${optionKey}: ${optionValue}`;
-        btn.disabled = false;
-        btn.onclick = function() {
-            checkAnswer(optionKey, questionData);
-        };
-    });
+            document.getElementById('question').innerText = questionData.question;
 
-    document.getElementById('feedback').innerText = "";
-    document.getElementById('next-button').style.display = 'none';
-}
+            const answerButtons = document.querySelectorAll('.answer-button');
+            answerButtons.forEach((btn, index) => {
+                const optionKey = Object.keys(questionData.options)[index];
+                const optionValue = Object.values(questionData.options)[index];
+                btn.innerText = `${optionKey}: ${optionValue}`;
+                btn.disabled = false;
+                btn.onclick = function() {
+                    checkAnswer(optionKey, questionData);
+                };
+            });
 
-// Function to check the selected answer
-function checkAnswer(selected, questionData) {
-    if (selected === questionData.correct) {
-        document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
-    } else {
-        document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
-    }
+            document.getElementById('feedback').innerText = "";
+            document.getElementById('next-button').style.display = 'none';
+        }
 
-    // Disable buttons after selection
-    document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
+        // Function to check the selected answer
+        function checkAnswer(selected, questionData) {
+            if (selected === questionData.correct) {
+                document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+            } else {
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
+            }
 
-    // Show the "Next Question" button
-    document.getElementById('next-button').style.display = 'block';
-}
+            // Disable buttons after selection
+            document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
-// Initial load of a question
-loadQuestion();
+            // Show the "Next Question" button
+            document.getElementById('next-button').style.display = 'block';
+        }
+
+        // Initial load of a question
+        loadQuestion();
+    </script>
+</body>
+</html>
