@@ -1,0 +1,57 @@
+// Array of questions, answers, and explanations
+const quiz = [
+    {
+        question: "What is the capital of France?",
+        options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
+        correct: "C",
+        explanation: "Paris is the capital city of France."
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
+        correct: "B",
+        explanation: "Jupiter is the largest planet in our solar system."
+    }
+    // Add more questions here
+];
+
+// Function to load a new question
+function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quiz.length);
+    const questionData = quiz[randomIndex];
+
+    document.getElementById('question').innerText = questionData.question;
+    
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((btn, index) => {
+        // Ensure the buttons have the correct text
+        const optionKey = Object.keys(questionData.options)[index];
+        const optionValue = Object.values(questionData.options)[index];
+        btn.innerText = `${optionKey}: ${optionValue}`;
+        btn.disabled = false;
+        btn.onclick = function() {
+            checkAnswer(optionKey, questionData);
+        };
+    });
+
+    document.getElementById('feedback').innerText = "";
+    document.getElementById('next-button').style.display = 'none';
+}
+
+// Function to check the selected answer
+function checkAnswer(selected, questionData) {
+    if (selected === questionData.correct) {
+        document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+    } else {
+        document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
+    }
+
+    // Disable buttons after selection
+    document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+
+    // Show the "Next Question" button
+    document.getElementById('next-button').style.display = 'block';
+}
+
+// Initial load of a question
+loadQuestion();
