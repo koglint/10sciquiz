@@ -39,37 +39,29 @@
         <button class="answer-button">D</button>
         <!-- Feedback and Next Question button -->
         <p id="feedback"></p>
-        <button id="next-button" style="display: none;">Next Question</button>
+        <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
     </div>
 
     <script>
-        // Function to fetch questions from the external HTML file
-        async function loadQuestions() {
-            try {
-                const response = await fetch('questions.html');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const text = await response.text();
-                const data = JSON.parse(new DOMParser().parseFromString(text, 'text/html').querySelector('#quiz-data').textContent);
-                return data;
-            } catch (error) {
-                console.error('Failed to load questions:', error);
-                document.getElementById('question-container').innerHTML = "<p>Failed to load questions. Please try again later.</p>";
-                return [];
+        // Array of questions, answers, and explanations
+        const quiz = [
+            {
+                question: "What is the capital of France?",
+                options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
+                correct: "C",
+                explanation: "Paris is the capital city of France."
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
+                correct: "B",
+                explanation: "Jupiter is the largest planet in our solar system."
             }
-        }
-
-        // Load questions and start the quiz
-        loadQuestions().then(quiz => {
-            if (quiz.length > 0) {
-                loadQuestion(quiz);
-                document.getElementById('next-button').onclick = () => loadQuestion(quiz);
-            }
-        });
+            // Add more questions here
+        ];
 
         // Function to load a new question
-        function loadQuestion(quiz) {
+        function loadQuestion() {
             const randomIndex = Math.floor(Math.random() * quiz.length);
             const questionData = quiz[randomIndex];
 
@@ -104,6 +96,9 @@
             // Show the "Next Question" button
             document.getElementById('next-button').style.display = 'block';
         }
+
+        // Initial load of a question
+        loadQuestion();
     </script>
 </body>
 </html>
