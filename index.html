@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div id="question-container">
+        <p id="question"></p>
+        <button onclick="checkAnswer('A')">A</button>
+        <button onclick="checkAnswer('B')">B</button>
+        <button onclick="checkAnswer('C')">C</button>
+        <button onclick="checkAnswer('D')">D</button>
+        <p id="feedback"></p>
+        <button id="next-button" onclick="loadQuestion()" style="display: none;">Next Question</button>
+    </div>
+    <script>
+        const quiz = [
+            {
+                question: "What is the capital of France?",
+                options: {A: "Berlin", B: "Madrid", C: "Paris", D: "Rome"},
+                correct: "C",
+                explanation: "Paris is the capital city of France."
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: {A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn"},
+                correct: "B",
+                explanation: "Jupiter is the largest planet in our solar system."
+            }
+            // Add more questions here
+        ];
+
+        function loadQuestion() {
+            const randomIndex = Math.floor(Math.random() * quiz.length);
+            const questionData = quiz[randomIndex];
+
+            document.getElementById('question').innerText = questionData.question;
+            document.querySelectorAll('button').forEach((btn, index) => {
+                btn.innerText = `${Object.keys(questionData.options)[index]}: ${Object.values(questionData.options)[index]}`;
+                btn.disabled = false;
+            });
+
+            document.getElementById('feedback').innerText = "";
+            document.getElementById('next-button').style.display = 'none';
+        }
+
+        function checkAnswer(selected) {
+            const questionText = document.getElementById('question').innerText;
+            const questionData = quiz.find(q => q.question === questionText);
+            
+            if (selected === questionData.correct) {
+                document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+            } else {
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
+            }
+
+            document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+            document.getElementById('next-button').style.display = 'block';
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
