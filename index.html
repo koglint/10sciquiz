@@ -45,20 +45,607 @@
     <script>
         // Array of questions, answers, and explanations
         const quiz = [
-            {
-                question: "What is the capital of France?",
-                options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
-                correct: "C",
-                explanation: "Paris is the capital city of France."
-            },
-            {
-                question: "What is the largest planet in our solar system?",
-                options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
-                correct: "B",
-                explanation: "Jupiter is the largest planet in our solar system."
-            }
-            // Add more questions here
-        ];
+    {
+        question: "What is the first step in developing a scientific investigation?",
+        options: { A: "Conducting an experiment", B: "Developing a hypothesis", C: "Collecting data", D: "Analyzing results" },
+        correct: "B",
+        explanation: "The first step in scientific investigation is developing a hypothesis to be tested."
+    },
+    {
+        question: "In a valid experimental method, the independent variable is:",
+        options: { A: "The variable that is measured", B: "The variable that is kept constant", C: "The variable that is changed", D: "The variable that is compared" },
+        correct: "C",
+        explanation: "The independent variable is the one that is intentionally changed in an experiment."
+    },
+    {
+        question: "Which of the following represents a dependent variable in an experiment?",
+        options: { A: "The type of plant used", B: "The amount of sunlight given", C: "The height of the plant", D: "The soil type" },
+        correct: "C",
+        explanation: "The dependent variable is what you measure in the experiment."
+    },
+    {
+        question: "Safety procedures during an experiment are important because:",
+        options: { A: "They ensure the experiment is completed quickly", B: "They protect the integrity of the data", C: "They ensure that accurate results are obtained", D: "They protect individuals from harm" },
+        correct: "D",
+        explanation: "Safety procedures ensure that experiments are conducted without causing harm."
+    },
+    {
+        question: "What is the purpose of constructing a graph from experimental results?",
+        options: { A: "To prove a hypothesis correct", B: "To visually represent the data for analysis", C: "To make the report look professional", D: "To compare the results with other experiments" },
+        correct: "B",
+        explanation: "Graphs help in visualizing data to identify trends and patterns."
+    },
+    {
+        question: "Evaluating the reliability of experimental results involves:",
+        options: { A: "Checking if the experiment can be replicated", B: "Changing the experiment parameters", C: "Ignoring anomalies in the data", D: "Comparing results with another group" },
+        correct: "A",
+        explanation: "Reliability involves seeing if results can be consistently reproduced."
+    },
+    {
+        question: "A control variable in an experiment:",
+        options: { A: "Is changed to see the effect", B: "Is kept constant throughout the experiment", C: "Is used to calibrate equipment", D: "Is measured during the experiment" },
+        correct: "B",
+        explanation: "Control variables are kept constant to ensure a fair test."
+    },
+    {
+        question: "Why is it important to communicate findings in a complete scientific report?",
+        options: { A: "To share results with the scientific community", B: "To get a good grade in science class", C: "To increase the length of the report", D: "To simplify the experiment process" },
+        correct: "A",
+        explanation: "Communicating findings is essential for contributing to scientific knowledge."
+    },
+    {
+        question: "When analyzing second-hand sources, which of the following is most critical?",
+        options: { A: "The popularity of the source", B: "The date of publication", C: "The validity and reliability of the information", D: "The length of the document" },
+        correct: "C",
+        explanation: "Evaluating sources involves assessing their reliability and relevance."
+    },
+    {
+        question: "Which component is NOT included in a complete scientific report?",
+        options: { A: "Introduction", B: "Hypothesis", C: "Conclusion", D: "Bibliography" },
+        correct: "A",
+        explanation: "A complete scientific report includes an introduction, not just the listed options."
+    },
+    {
+        question: "What is a biotic component of an ecosystem?",
+        options: { A: "Water", B: "Soil", C: "Sunlight", D: "Plants" },
+        correct: "D",
+        explanation: "Plants are living (biotic) components of ecosystems."
+    },
+    {
+        question: "In a food web, energy primarily flows from:",
+        options: { A: "Producers to consumers", B: "Consumers to producers", C: "Decomposers to producers", D: "Consumers to decomposers" },
+        correct: "A",
+        explanation: "Energy flows from producers to consumers in a food web."
+    },
+    {
+        question: "How does an increase in predator population affect the prey population?",
+        options: { A: "The prey population increases", B: "The prey population decreases", C: "There is no effect", D: "The prey population remains constant" },
+        correct: "B",
+        explanation: "An increase in predators typically leads to a decrease in prey populations."
+    },
+    {
+        question: "What process is involved in the cycling of nitrogen through an ecosystem?",
+        options: { A: "Photosynthesis", B: "Decomposition", C: "Respiration", D: "Evaporation" },
+        correct: "B",
+        explanation: "Nitrogen is cycled through ecosystems via processes like decomposition."
+    },
+    {
+        question: "Which of the following spheres is involved in the carbon cycle?",
+        options: { A: "Atmosphere", B: "Lithosphere", C: "Hydrosphere", D: "All of the above" },
+        correct: "D",
+        explanation: "The carbon cycle involves interactions between the atmosphere, lithosphere, hydrosphere, and biosphere."
+    },
+    {
+        question: "Human activity has contributed to the greenhouse effect primarily through:",
+        options: { A: "Deforestation", B: "Urbanization", C: "Industrial emissions", D: "Overfishing" },
+        correct: "C",
+        explanation: "Industrial activities release greenhouse gases, contributing to the greenhouse effect."
+    },
+    {
+        question: "The depletion of the ozone layer has been linked to the use of:",
+        options: { A: "Fossil fuels", B: "Chlorofluorocarbons (CFCs)", C: "Pesticides", D: "Nuclear energy" },
+        correct: "B",
+        explanation: "CFCs have been linked to ozone layer depletion."
+    },
+    {
+        question: "Rising sea levels are a direct consequence of:",
+        options: { A: "Increased volcanic activity", B: "Melting polar ice caps", C: "Deforestation", D: "Air pollution" },
+        correct: "B",
+        explanation: "Rising sea levels are caused by the melting of polar ice caps."
+    },
+    {
+        question: "Which human activity significantly impacts biodiversity loss?",
+        options: { A: "Urban expansion", B: "Recycling programs", C: "Organic farming", D: "Public transportation" },
+        correct: "A",
+        explanation: "Urbanization leads to habitat destruction and loss of biodiversity."
+    },
+    {
+        question: "The Montreal Protocol is an international agreement aimed at:",
+        options: { A: "Reducing carbon emissions", B: "Protecting endangered species", C: "Phasing out substances that deplete the ozone layer", D: "Preventing deforestation" },
+        correct: "C",
+        explanation: "The Montreal Protocol focuses on protecting the ozone layer."
+    },
+    {
+        question: "Which of the following is an advantage of sexual reproduction?",
+        options: { A: "Produces genetically identical offspring", B: "Faster reproduction rate", C: "Greater genetic diversity", D: "Requires only one parent" },
+        correct: "C",
+        explanation: "Sexual reproduction increases genetic diversity, which is advantageous for populations."
+    },
+    {
+        question: "The primary function of the ovaries in the female reproductive system is to:",
+        options: { A: "Produce sperm", B: "Produce eggs and hormones", C: "Nourish the embryo", D: "Facilitate fertilization" },
+        correct: "B",
+        explanation: "The ovaries produce eggs and hormones like estrogen."
+    },
+    {
+        question: "Which hormone is responsible for the regulation of the menstrual cycle?",
+        options: { A: "Testosterone", B: "Estrogen", C: "Insulin", D: "Thyroxine" },
+        correct: "B",
+        explanation: "Estrogen plays a key role in regulating the menstrual cycle."
+    },
+    {
+        question: "Which method of contraception is classified as a barrier method?",
+        options: { A: "Birth control pills", B: "Condoms", C: "Sterilization", D: "Intrauterine device (IUD)" },
+        correct: "B",
+        explanation: "Condoms are a type of barrier contraception."
+    },
+    {
+        question: "Heritable characteristics are transmitted from one generation to the next through:",
+        options: { A: "Proteins", B: "RNA", C: "DNA", D: "Lipids" },
+        correct: "C",
+        explanation: "DNA carries the genetic information that is passed from one generation to the next."
+    },
+    {
+        question: "The structure of DNA is best described as:",
+        options: { A: "A single helix", B: "A double helix", C: "A triple helix", D: "A quadruple helix" },
+        correct: "B",
+        explanation: "DNA is structured as a double helix."
+    },
+    {
+        question: "Mitosis is a process that results in:",
+        options: { A: "The production of gametes", B: "The formation of two identical daughter cells", C: "The reduction of chromosome number by half", D: "The creation of new genetic material" },
+        correct: "B",
+        explanation: "Mitosis results in two identical cells."
+    },
+    {
+        question: "A mutation in a gene can lead to:",
+        options: { A: "The formation of identical offspring", B: "An increase in genetic diversity", C: "The elimination of genetic traits", D: "No observable changes" },
+        correct: "B",
+        explanation: "Mutations can increase genetic diversity within a population."
+    },
+    {
+        question: "The process by which haploid cells are formed is called:",
+        options: { A: "Mitosis", B: "Meiosis", C: "Fertilization", D: "Mutation" },
+        correct: "B",
+        explanation: "Meiosis is the process that forms haploid cells (gametes)."
+    },
+    {
+        question: "A dominant characteristic will appear in the phenotype if:",
+        options: { A: "Only one allele is present", B: "Both alleles are recessive", C: "Only one allele is recessive", D: "Both alleles are dominant" },
+        correct: "A",
+        explanation: "A dominant characteristic will appear in the phenotype if at least one dominant allele is present."
+    },
+    {
+        question: "Speed is defined as:",
+        options: { A: "Distance divided by time", B: "Time divided by distance", C: "Force divided by mass", D: "Acceleration multiplied by mass" },
+        correct: "A",
+        explanation: "Speed is calculated as the distance traveled divided by the time taken."
+    },
+    {
+        question: "Velocity differs from speed in that velocity:",
+        options: { A: "Is a scalar quantity", B: "Has both magnitude and direction", C: "Is measured in meters per second squared", D: "Is independent of direction" },
+        correct: "B",
+        explanation: "Velocity is a vector quantity, meaning it includes both speed and direction."
+    },
+    {
+        question: "According to Newton’s second law of motion, force equals:",
+        options: { A: "Mass times velocity", B: "Mass times acceleration", C: "Acceleration times distance", D: "Mass divided by acceleration" },
+        correct: "B",
+        explanation: "According to Newton's second law, force equals mass times acceleration."
+    },
+    {
+        question: "A free-body diagram is used to:",
+        options: { A: "Measure the distance traveled", B: "Determine the net force acting on an object", C: "Identify the velocity of an object", D: "Show the path of an object" },
+        correct: "B",
+        explanation: "Free-body diagrams are used to show all the forces acting on an object."
+    },
+    {
+        question: "Displacement is related to:",
+        options: { A: "The total distance traveled", B: "The change in position of an object", C: "The time taken for a journey", D: "The speed of an object" },
+        correct: "B",
+        explanation: "Displacement refers to how far out of place an object is; it is the object's overall change in position."
+    },
+    {
+        question: "Which of the following is an application of Newton’s first law of motion?",
+        options: { A: "A car accelerating when the gas pedal is pressed", B: "A ball remaining at rest until kicked", C: "A rocket launching into space", D: "A satellite orbiting the Earth" },
+        correct: "B",
+        explanation: "Newton's first law states that an object at rest stays at rest unless acted upon by a force."
+    },
+    {
+        question: "Newton’s third law of motion states that:",
+        options: { A: "Every action has an equal and opposite reaction", B: "Force equals mass times acceleration", C: "Objects in motion stay in motion", D: "Energy cannot be created or destroyed" },
+        correct: "A",
+        explanation: "Newton's third law of motion."
+    },
+    {
+        question: "In space travel, Newton's laws are applied to:",
+        options: { A: "Predict the movement of celestial bodies", B: "Design propulsion systems for spacecraft", C: "Determine the amount of fuel needed", D: "All of the above" },
+        correct: "D",
+        explanation: "Newton's laws are essential for understanding space travel."
+    },
+    {
+        question: "Acceleration is defined as:",
+        options: { A: "Change in speed over time", B: "Distance divided by time", C: "Mass divided by force", D: "The rate at which an object falls" },
+        correct: "A",
+        explanation: "Acceleration is the rate of change of velocity with respect to time."
+    },
+    {
+        question: "Which of the following demonstrates Newton’s second law?",
+        options: { A: "A heavier object requires more force to move", B: "An object at rest remains at rest", C: "A bullet moves in the opposite direction of the fired gun", D: "Energy is transferred when a ball is thrown" },
+        correct: "A",
+        explanation: "This demonstrates Newton's second law."
+    },
+    {
+        question: "An atom consists of:",
+        options: { A: "Protons, neutrons, and electrons", B: "Molecules and compounds", C: "Ions and isotopes", D: "Elements and compounds" },
+        correct: "A",
+        explanation: "These are the three basic particles that make up an atom."
+    },
+    {
+        question: "Water (H2O) is classified as a:",
+        options: { A: "Mixture", B: "Compound", C: "Element", D: "Solution" },
+        correct: "B",
+        explanation: "Water is a compound made up of hydrogen and oxygen."
+    },
+    {
+        question: "The law of conservation of mass states that:",
+        options: { A: "Matter is created during a chemical reaction", B: "Mass is lost in a physical change", C: "Mass is conserved in a chemical reaction", D: "Mass increases with temperature" },
+        correct: "C",
+        explanation: "According to the law of conservation of mass, mass cannot be created or destroyed."
+    },
+    {
+        question: "A substance that tastes sour and turns blue litmus paper red is likely a(n):",
+        options: { A: "Acid", B: "Base", C: "Salt", D: "Alkali" },
+        correct: "A",
+        explanation: "Acids typically taste sour and turn blue litmus paper red."
+    },
+    {
+        question: "Neutralization is the reaction between:",
+        options: { A: "An acid and a base", B: "A metal and a non-metal", C: "A solid and a liquid", D: "A gas and a plasma" },
+        correct: "A",
+        explanation: "Neutralization is the reaction between an acid and a base."
+    },
+    {
+        question: "Which of the following is a product of complete combustion?",
+        options: { A: "Carbon monoxide", B: "Water vapor", C: "Sulfur dioxide", D: "Nitrogen dioxide" },
+        correct: "B",
+        explanation: "Complete combustion produces water vapor and carbon dioxide."
+    },
+    {
+        question: "A catalyst:",
+        options: { A: "Slows down a chemical reaction", B: "Speeds up a chemical reaction", C: "Is consumed during a chemical reaction", D: "Has no effect on a chemical reaction" },
+        correct: "B",
+        explanation: "A catalyst increases the rate of a chemical reaction."
+    },
+    {
+        question: "Respiration in humans is an example of:",
+        options: { A: "An exothermic reaction", B: "An endothermic reaction", C: "A precipitation reaction", D: "A decomposition reaction" },
+        correct: "A",
+        explanation: "Respiration releases energy, making it an exothermic reaction."
+    },
+    {
+        question: "Which factor does NOT affect the rate of a chemical reaction?",
+        options: { A: "Temperature", B: "Surface area", C: "Color of reactants", D: "Concentration of reactants" },
+        correct: "C",
+        explanation: "Color typically does not affect the rate of a chemical reaction."
+    },
+    {
+        question: "The process of corrosion can be prevented by:",
+        options: { A: "Increasing the temperature", B: "Applying a protective coating", C: "Adding more water", D: "Exposing it to air" },
+        correct: "B",
+        explanation: "Corrosion can be prevented by applying a coating to protect the material from the environment."
+    },
+    {
+        question: "What is the primary function of chloroplasts in plant cells?",
+        options: { A: "Respiration", B: "Photosynthesis", C: "Protein synthesis", D: "Cellular division" },
+        correct: "B",
+        explanation: "Chloroplasts are the site of photosynthesis in plant cells."
+    },
+    {
+        question: "In which part of the cell does glycolysis occur?",
+        options: { A: "Nucleus", B: "Mitochondria", C: "Cytoplasm", D: "Chloroplast" },
+        correct: "C",
+        explanation: "Glycolysis occurs in the cytoplasm of cells."
+    },
+    {
+        question: "Which of the following best describes an ecosystem?",
+        options: { A: "A community of organisms interacting with each other and their physical environment", B: "A group of the same species living in an area", C: "A collection of abiotic factors in a region", D: "A food chain with multiple trophic levels" },
+        correct: "A",
+        explanation: "An ecosystem includes both living organisms and their environment."
+    },
+    {
+        question: "The role of decomposers in an ecosystem is to:",
+        options: { A: "Fix nitrogen in the soil", B: "Break down dead organic material", C: "Produce energy from sunlight", D: "Create new organisms" },
+        correct: "B",
+        explanation: "Decomposers break down dead material, recycling nutrients back into the ecosystem."
+    },
+    {
+        question: "Which gas is primarily responsible for the greenhouse effect?",
+        options: { A: "Oxygen", B: "Carbon dioxide", C: "Nitrogen", D: "Hydrogen" },
+        correct: "B",
+        explanation: "Carbon dioxide is a major greenhouse gas contributing to the greenhouse effect."
+    },
+    {
+        question: "Which of the following is a method used to measure biodiversity?",
+        options: { A: "Counting the number of species in an area", B: "Measuring the amount of rainfall in an ecosystem", C: "Analyzing the pH of the soil", D: "Estimating the carbon footprint" },
+        correct: "A",
+        explanation: "Biodiversity is often measured by species richness in an ecosystem."
+    },
+    {
+        question: "What type of bond holds the two strands of DNA together?",
+        options: { A: "Ionic bonds", B: "Covalent bonds", C: "Hydrogen bonds", D: "Metallic bonds" },
+        correct: "C",
+        explanation: "Hydrogen bonds hold the two strands of DNA together."
+    },
+    {
+        question: "Which of the following processes produces gametes?",
+        options: { A: "Mitosis", B: "Meiosis", C: "Fertilization", D: "Mutation" },
+        correct: "B",
+        explanation: "Meiosis produces gametes with half the number of chromosomes of the parent cell."
+    },
+    {
+        question: "Which of the following is an example of a renewable resource?",
+        options: { A: "Coal", B: "Natural gas", C: "Solar energy", D: "Nuclear energy" },
+        correct: "C",
+        explanation: "Solar energy is a renewable resource."
+    },
+    {
+        question: "The introduction of a non-native species to an ecosystem can lead to:",
+        options: { A: "Increased biodiversity", B: "The extinction of native species", C: "Greater ecological balance", D: "Improved habitat quality" },
+        correct: "B",
+        explanation: "Non-native species can outcompete native species, leading to extinctions."
+    },
+    {
+        question: "A Punnett square is used to:",
+        options: { A: "Determine the speed of a chemical reaction", B: "Predict the probability of an offspring's genotype", C: "Identify the stages of mitosis", D: "Measure the density of a population" },
+        correct: "B",
+        explanation: "Punnett squares are used to predict the likelihood of inheriting specific traits."
+    },
+    {
+        question: "Which type of electromagnetic radiation has the shortest wavelength?",
+        options: { A: "Radio waves", B: "Infrared", C: "Ultraviolet", D: "Gamma rays" },
+        correct: "D",
+        explanation: "Gamma rays have the shortest wavelength in the electromagnetic spectrum."
+    },
+    {
+        question: "Which of the following is an example of an exothermic reaction?",
+        options: { A: "Melting ice", B: "Dissolving salt in water", C: "Combustion of gasoline", D: "Photosynthesis" },
+        correct: "C",
+        explanation: "Combustion reactions release energy, making them exothermic."
+    },
+    {
+        question: "The pH scale is used to measure:",
+        options: { A: "The concentration of salt in a solution", B: "The acidity or alkalinity of a substance", C: "The rate of evaporation", D: "The temperature of a liquid" },
+        correct: "B",
+        explanation: "The pH scale measures how acidic or basic a substance is."
+    },
+    {
+        question: "Which of the following is NOT a function of the human skeletal system?",
+        options: { A: "Protecting internal organs", B: "Producing blood cells", C: "Storing minerals", D: "Digesting food" },
+        correct: "D",
+        explanation: "Digestion is not a function of the skeletal system."
+    },
+    {
+        question: "What is the chemical formula for methane?",
+        options: { A: "CH4", B: "CO2", C: "H2O", D: "C2H6" },
+        correct: "A",
+        explanation: "Methane's chemical formula is CH4."
+    },
+    {
+        question: "Which principle states that energy cannot be created or destroyed?",
+        options: { A: "The law of conservation of mass", B: "The law of conservation of energy", C: "Newton's first law", D: "Boyle's law" },
+        correct: "B",
+        explanation: "Energy cannot be created or destroyed, only transformed."
+    },
+    {
+        question: "An increase in greenhouse gases is most likely to cause:",
+        options: { A: "Global cooling", B: "An increase in the Earth's temperature", C: "A decrease in sea levels", D: "More frequent volcanic eruptions" },
+        correct: "B",
+        explanation: "Greenhouse gases trap heat, leading to global warming."
+    },
+    {
+        question: "Which type of reproduction involves two parents and results in genetically diverse offspring?",
+        options: { A: "Asexual reproduction", B: "Binary fission", C: "Sexual reproduction", D: "Budding" },
+        correct: "C",
+        explanation: "Sexual reproduction involves two parents and results in genetically diverse offspring."
+    },
+    {
+        question: "What is the main source of energy for life on Earth?",
+        options: { A: "The Moon", B: "The Sun", C: "Fossil fuels", D: "Earth's core" },
+        correct: "B",
+        explanation: "The Sun is the primary source of energy for life on Earth."
+    },
+    {
+        question: "Which of the following is an abiotic factor in an ecosystem?",
+        options: { A: "Plants", B: "Animals", C: "Temperature", D: "Fungi" },
+        correct: "C",
+        explanation: "Temperature is an abiotic factor affecting ecosystems."
+    },
+    {
+        question: "The process by which plants convert sunlight into chemical energy is called:",
+        options: { A: "Respiration", B: "Photosynthesis", C: "Digestion", D: "Fermentation" },
+        correct: "B",
+        explanation: "Photosynthesis is the process by which plants convert sunlight into chemical energy."
+    },
+    {
+        question: "Which of the following correctly describes the structure of a water molecule?",
+        options: { A: "One hydrogen atom and two oxygen atoms", B: "Two hydrogen atoms and one oxygen atom", C: "One hydrogen atom and one oxygen atom", D: "Two oxygen atoms and one hydrogen atom" },
+        correct: "B",
+        explanation: "Water is composed of two hydrogen atoms and one oxygen atom."
+    },
+    {
+        question: "The first step in the water cycle is:",
+        options: { A: "Condensation", B: "Evaporation", C: "Precipitation", D: "Transpiration" },
+        correct: "B",
+        explanation: "The water cycle begins with the evaporation of water from surfaces."
+    },
+    {
+        question: "What is the primary function of the respiratory system in humans?",
+        options: { A: "To circulate blood throughout the body", B: "To exchange gases between the body and the environment", C: "To break down food into nutrients", D: "To regulate body temperature" },
+        correct: "B",
+        explanation: "The respiratory system is responsible for gas exchange."
+    },
+    {
+        question: "Which of the following is a biotic factor that can affect the size of a population?",
+        options: { A: "Temperature", B: "Food availability", C: "Water supply", D: "Soil pH" },
+        correct: "B",
+        explanation: "The availability of food is a biotic factor that can influence population size."
+    },
+    {
+        question: "Which process describes the splitting of water during photosynthesis?",
+        options: { A: "Photolysis", B: "Glycolysis", C: "Fermentation", D: "Oxidation" },
+        correct: "A",
+        explanation: "Photolysis is the process of splitting water molecules during photosynthesis."
+    },
+    {
+        question: "Which gas is a byproduct of photosynthesis?",
+        options: { A: "Carbon dioxide", B: "Oxygen", C: "Nitrogen", D: "Methane" },
+        correct: "B",
+        explanation: "Oxygen is released as a byproduct of photosynthesis."
+    },
+    {
+        question: "What is the role of ribosomes in a cell?",
+        options: { A: "To produce energy", B: "To synthesize proteins", C: "To store genetic material", D: "To transport substances" },
+        correct: "B",
+        explanation: "Ribosomes are responsible for protein synthesis in cells."
+    },
+    {
+        question: "Which of the following correctly describes meiosis?",
+        options: { A: "A single cell division that results in two identical daughter cells", B: "A double cell division that results in four genetically unique gametes", C: "A type of asexual reproduction", D: "The fusion of gametes to form a zygote" },
+        correct: "B",
+        explanation: "Meiosis produces four genetically diverse gametes."
+    },
+    {
+        question: "Which layer of the Earth is composed primarily of solid rock?",
+        options: { A: "Crust", B: "Mantle", C: "Outer core", D: "Inner core" },
+        correct: "A",
+        explanation: "The Earth's crust is the outermost solid layer."
+    },
+    {
+        question: "What is the main consequence of ozone layer depletion?",
+        options: { A: "Increased global warming", B: "Increased UV radiation reaching the Earth's surface", C: "Decreased biodiversity", D: "More frequent natural disasters" },
+        correct: "B",
+        explanation: "Ozone layer depletion allows more harmful UV radiation to reach Earth."
+    },
+    {
+        question: "Which process involves the transfer of heat through direct contact between materials?",
+        options: { A: "Convection", B: "Radiation", C: "Conduction", D: "Evaporation" },
+        correct: "C",
+        explanation: "Conduction is the transfer of heat through direct contact."
+    },
+    {
+        question: "Which of the following is an example of a physical change?",
+        options: { A: "Rusting of iron", B: "Burning of wood", C: "Melting of ice", D: "Digestion of food" },
+        correct: "C",
+        explanation: "Melting is a physical change where no new substance is formed."
+    },
+    {
+        question: "What is the primary purpose of the circulatory system in humans?",
+        options: { A: "To break down nutrients", B: "To transport oxygen and nutrients to cells", C: "To filter waste from the blood", D: "To protect the body from infection" },
+        correct: "B",
+        explanation: "The circulatory system delivers essential nutrients and oxygen to cells."
+    },
+    {
+        question: "Which of the following is an example of a chemical reaction?",
+        options: { A: "Freezing of water", B: "Melting of wax", C: "Baking a cake", D: "Cutting paper" },
+        correct: "C",
+        explanation: "Baking a cake involves chemical reactions that produce new substances."
+    },
+    {
+        question: "Which element is most abundant in the Earth's atmosphere?",
+        options: { A: "Oxygen", B: "Hydrogen", C: "Nitrogen", D: "Carbon dioxide" },
+        correct: "C",
+        explanation: "Nitrogen makes up about 78% of the Earth's atmosphere."
+    },
+    {
+        question: "Which of the following best describes the function of mitochondria in cells?",
+        options: { A: "Photosynthesis", B: "Cellular respiration", C: "Protein synthesis", D: "DNA replication" },
+        correct: "B",
+        explanation: "Mitochondria are the powerhouses of the cell, where cellular respiration occurs."
+    },
+    {
+        question: "Which of the following correctly describes the nitrogen cycle?",
+        options: { A: "The process by which nitrogen is absorbed by plants and passed through the food chain", B: "The conversion of nitrogen gas into ammonia by bacteria", C: "The release of nitrogen gas into the atmosphere by decomposers", D: "All of the above" },
+        correct: "D",
+        explanation: "The nitrogen cycle includes absorption by plants, conversion by bacteria, and release by decomposers."
+    },
+    {
+        question: "What is the relationship between an enzyme and a substrate?",
+        options: { A: "The enzyme is the reactant, and the substrate is the product", B: "The enzyme binds to the substrate to catalyze a reaction", C: "The enzyme inhibits the reaction of the substrate", D: "The enzyme is consumed in the reaction with the substrate" },
+        correct: "B",
+        explanation: "Enzymes speed up reactions by binding to substrates."
+    },
+    {
+        question: "Which of the following is NOT a greenhouse gas?",
+        options: { A: "Carbon dioxide", B: "Methane", C: "Nitrous oxide", D: "Oxygen" },
+        correct: "D",
+        explanation: "Oxygen is not a greenhouse gas."
+    },
+    {
+        question: "What is the role of the ozone layer in the Earth's atmosphere?",
+        options: { A: "To trap heat and warm the Earth", B: "To reflect sunlight back into space", C: "To absorb and block harmful UV radiation", D: "To provide oxygen for respiration" },
+        correct: "C",
+        explanation: "The ozone layer protects life on Earth by absorbing UV radiation."
+    },
+    {
+        question: "What is the effect of increasing temperature on the rate of a chemical reaction?",
+        options: { A: "It decreases the rate", B: "It has no effect", C: "It increases the rate", D: "It depends on the reactants" },
+        correct: "C",
+        explanation: "Increasing temperature typically speeds up chemical reactions."
+    },
+    {
+        question: "Which of the following is an example of a symbiotic relationship?",
+        options: { A: "A lion hunting a zebra", B: "A bee pollinating a flower", C: "A tree absorbing sunlight", D: "A bird migrating south for the winter" },
+        correct: "B",
+        explanation: "Pollination is a symbiotic relationship between bees and flowers."
+    },
+    {
+        question: "Which type of organism is typically at the top of a food chain?",
+        options: { A: "Producers", B: "Herbivores", C: "Carnivores", D: "Decomposers" },
+        correct: "C",
+        explanation: "Carnivores are typically at the top of the food chain."
+    },
+    {
+        question: "The primary purpose of cellular respiration is to:",
+        options: { A: "Produce glucose", B: "Break down proteins", C: "Release energy from food molecules", D: "Store energy in the form of fat" },
+        correct: "C",
+        explanation: "Cellular respiration releases energy stored in food."
+    },
+    {
+        question: "What is the main purpose of mitosis?",
+        options: { A: "To produce gametes for sexual reproduction", B: "To repair damaged tissues", C: "To create new genetic combinations", D: "To maintain genetic diversity" },
+        correct: "B",
+        explanation: "Mitosis is important for growth and repair in organisms."
+    },
+    {
+        question: "The carbon cycle involves the movement of carbon:",
+        options: { A: "Between the atmosphere, hydrosphere, lithosphere, and biosphere", B: "From the sun to the Earth", C: "Between different layers of the Earth's crust", D: "Through the process of nuclear fusion" },
+        correct: "A",
+        explanation: "The carbon cycle involves the movement of carbon through Earth's systems."
+    },
+    {
+        question: "Which of the following is a product of anaerobic respiration in muscle cells?",
+        options: { A: "Lactic acid", B: "Carbon dioxide", C: "Ethanol", D: "Oxygen" },
+        correct: "A",
+        explanation: "Lactic acid is produced during anaerobic respiration in muscle cells."
+    },
+    {
+        question: "What is the relationship between force and acceleration according to Newton's second law?",
+        options: { A: "Force is directly proportional to acceleration", B: "Force is inversely proportional to acceleration", C: "Force is equal to mass divided by acceleration", D: "Force is not related to acceleration" },
+        correct: "A",
+        explanation: "According to Newton's second law, force is proportional to acceleration."
+    }
+];
 
         // Function to load a new question
         function loadQuestion() {
