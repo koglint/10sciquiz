@@ -5,37 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <style>
-        /* Basic styling for the quiz */
+        /* Basic styling for the entire page */
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
             max-width: 600px;
             margin: auto;
+            background-color: #f4f4f4;
+            color: #333;
         }
+
+        /* Styling for buttons */
         button {
             display: block;
             width: 100%;
             margin: 10px 0;
             padding: 15px;
             font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        #next-button {
-            margin-top: 20px;
+
+        button:hover {
+            background-color: #45a049;
         }
+
+        /* Styling for the title page */
+        #title-page {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #title-page h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        #title-page button {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        /* Styling for the quiz container */
+        #quiz-container {
+            display: none;
+        }
+
+        /* Feedback message styling */
         #feedback {
             font-weight: bold;
             margin-top: 20px;
-        }
-        #title-page, #quiz-container {
-            display: none;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div id="title-page">
         <h1>Year 10 Yearly Exam Revision</h1>
-        <h2>No login. No scores. Just questions. </h2>
-        <h3>Don't worry if you haven't covered some questions: each class may have covered different material in different depths. You'll be fine.</h3>
         <button onclick="startQuiz()">Start Quiz</button>
     </div>
 
@@ -355,7 +386,7 @@
     "explanation": "Mutations can increase genetic diversity within a population."
   },
   {
-    "question": "The process by which haploid cells (sex cells, AKA gametes) are formed is called:",
+    "question": "The process by which haploid (body) cells are formed is called:",
     "options": [
       "a) Mitosis",
       "b) Meiosis",
