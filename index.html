@@ -1,89 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-</head>
-<body>
-    <div id="question-container">
-        <h2 id="question"></h2>
-        <div id="options">
-            <button id="optionA"></button>
-            <button id="optionB"></button>
-            <button id="optionC"></button>
-            <button id="optionD"></button>
-        </div>
-        <p id="feedback"></p>
-        <button id="next-button" style="display:none;">Next Question</button>
-    </div>
+// Array of questions, answers, and explanations
+const quiz = [
+    {
+        question: "What is the capital of France?",
+        options: { A: "Berlin", B: "Madrid", C: "Paris", D: "Rome" },
+        correct: "C",
+        explanation: "Paris is the capital city of France."
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        options: { A: "Earth", B: "Jupiter", C: "Mars", D: "Saturn" },
+        correct: "B",
+        explanation: "Jupiter is the largest planet in our solar system."
+    }
+    // Add more questions here
+];
 
-    <!-- Questions stored directly in the index.html -->
-    <script type="application/json" id="quiz-data">
-    [
-        {
-            "question": "What is the first step in developing a scientific investigation?",
-            "options": { "A": "Conducting an experiment", "B": "Developing a hypothesis", "C": "Collecting data", "D": "Analyzing results" },
-            "correct": "B",
-            "explanation": "The first step in scientific investigation is developing a hypothesis to be tested."
-        },
-        {
-            "question": "In a valid experimental method, the independent variable is:",
-            "options": { "A": "The variable that is measured", "B": "The variable that is kept constant", "C": "The variable that is changed", "D": "The variable that is compared" },
-            "correct": "C",
-            "explanation": "The independent variable is the one that is intentionally changed in an experiment."
-        }
-        // Add more questions here...
-    ]
-    </script>
+// Function to load a new question
+function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quiz.length);
+    const questionData = quiz[randomIndex];
 
-    <script>
-        // Function to load questions from the embedded JSON in the index.html
-        function loadQuestions() {
-            const text = document.getElementById('quiz-data').textContent;
-            const data = JSON.parse(text);
-            return data;
-        }
+    document.getElementById('question').innerText = questionData.question;
 
-        // Load questions and start the quiz
-        const quiz = loadQuestions();
+    const answerButtons = document.querySelectorAll('.answer-button');
+    answerButtons.forEach((btn, index) => {
+        const optionKey = Object.keys(questionData.options)[index];
+        const optionValue = Object.values(questionData.options)[index];
+        btn.innerText = `${optionKey}: ${optionValue}`;
+        btn.disabled = false;
+        btn.onclick = function() {
+            checkAnswer(optionKey, questionData);
+        };
+    });
 
-        function loadQuestion() {
-            const randomIndex = Math.floor(Math.random() * quiz.length);
-            const questionData = quiz[randomIndex];
+    document.getElementById('feedback').innerText = "";
+    document.getElementById('next-button').style.display = 'none';
+}
 
-            document.getElementById('question').innerText = questionData.question;
+// Function to check the selected answer
+function checkAnswer(selected, questionData) {
+    if (selected === questionData.correct) {
+        document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+    } else {
+        document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
+    }
 
-            const buttons = document.querySelectorAll('#options button');
-            buttons.forEach((btn, index) => {
-                const optionKey = Object.keys(questionData.options)[index];
-                const optionValue = Object.values(questionData.options)[index];
-                btn.innerText = `${optionKey}: ${optionValue}`;
-                btn.disabled = false;
-                btn.onclick = function() {
-                    checkAnswer(optionKey, questionData);
-                };
-            });
+    // Disable buttons after selection
+    document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
-            document.getElementById('feedback').innerText = "";
-            document.getElementById('next-button').style.display = 'none';
-        }
+    // Show the "Next Question" button
+    document.getElementById('next-button').style.display = 'block';
+}
 
-        function checkAnswer(selected, questionData) {
-            if (selected === questionData.correct) {
-                document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
-            } else {
-                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
-            }
-
-            document.querySelectorAll('#options button').forEach(btn => btn.disabled = true);
-            document.getElementById('next-button').style.display = 'block';
-        }
-
-        document.getElementById('next-button').onclick = loadQuestion;
-
-        // Initial load of a question
-        loadQuestion();
-    </script>
-</body>
-</html>
+// Initial load of a question
+loadQuestion();
