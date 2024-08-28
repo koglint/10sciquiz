@@ -21,28 +21,43 @@
     <script>
         // Function to fetch questions from the external HTML file
         async function loadQuestions() {
-            const response = await fetch('questions.html');
-            const text = await response.text();
-            const data = JSON.parse(new DOMParser().parseFromString(text, 'text/html').querySelector('#quiz-data').textContent);
-            return data;
+            try {
+                const response = await fetch('questions.html');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const text = await response.text();
+                console.log('Fetched text:', text);  // Debugging: Check if the file is fetched correctly
+                const data = JSON.parse(new DOMParser().parseFromString(text, 'text/html').querySelector('#quiz-data').textContent);
+                console.log('Parsed data:', data);  // Debugging: Check if the JSON is parsed correctly
+                return data;
+            } catch (error) {
+                console.error('Failed to load questions:', error);
+                return [];  // Return an empty array on failure
+            }
         }
 
         // Load questions and start the quiz
         loadQuestions().then(quiz => {
+            if (quiz.length === 0) {
+                document.getElementById('question').innerText = "Failed to load questions.";
+                return;
+            }
+
             // Function to load a new question
             function loadQuestion() {
                 const randomIndex = Math.floor(Math.random() * quiz.length);
                 const questionData = quiz[randomIndex];
 
                 document.getElementById('question').innerText = questionData.question;
-                
-                const buttons = document.querySelectorAll('button');
+
+                const buttons = document.querySelectorAll('#options button');
                 buttons.forEach((btn, index) => {
                     const optionKey = Object.keys(questionData.options)[index];
                     const optionValue = Object.values(questionData.options)[index];
                     btn.innerText = `${optionKey}: ${optionValue}`;
                     btn.disabled = false;
-                    btn.onclick = function() {
+                    btn.onclick = function () {
                         checkAnswer(optionKey, questionData);
                     };
                 });
@@ -51,7 +66,6 @@
                 document.getElementById('next-button').style.display = 'none';
             }
 
-            
             // Function to check the selected answer
             function checkAnswer(selected, questionData) {
                 if (selected === questionData.correct) {
@@ -60,7 +74,7 @@
                     document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
                 }
 
-                document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+                document.querySelectorAll('#options button').forEach(btn => btn.disabled = true);
                 document.getElementById('next-button').style.display = 'block';
             }
 
