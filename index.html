@@ -22,6 +22,10 @@
         #next-button {
             margin-top: 20px;
         }
+        #feedback {
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -35,7 +39,7 @@
         <button class="answer-button">D</button>
         <!-- Feedback and Next Question button -->
         <p id="feedback"></p>
-        <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+        <button id="next-button" style="display: none;">Next Question</button>
     </div>
 
     <script>
@@ -60,10 +64,11 @@
         loadQuestions().then(quiz => {
             if (quiz.length > 0) {
                 loadQuestion(quiz);
+                document.getElementById('next-button').onclick = () => loadQuestion(quiz);
             }
         });
 
-        // Function to load a new question 
+        // Function to load a new question
         function loadQuestion(quiz) {
             const randomIndex = Math.floor(Math.random() * quiz.length);
             const questionData = quiz[randomIndex];
