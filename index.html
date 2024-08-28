@@ -18,71 +18,72 @@
         <button id="next-button" style="display:none;">Next Question</button>
     </div>
 
+    <!-- Questions stored directly in the index.html -->
+    <script type="application/json" id="quiz-data">
+    [
+        {
+            "question": "What is the first step in developing a scientific investigation?",
+            "options": { "A": "Conducting an experiment", "B": "Developing a hypothesis", "C": "Collecting data", "D": "Analyzing results" },
+            "correct": "B",
+            "explanation": "The first step in scientific investigation is developing a hypothesis to be tested."
+        },
+        {
+            "question": "In a valid experimental method, the independent variable is:",
+            "options": { "A": "The variable that is measured", "B": "The variable that is kept constant", "C": "The variable that is changed", "D": "The variable that is compared" },
+            "correct": "C",
+            "explanation": "The independent variable is the one that is intentionally changed in an experiment."
+        }
+        // Add more questions here...
+    ]
+    </script>
+
     <script>
-        // Function to fetch questions from the external HTML file
-        async function loadQuestions() {
-            try {
-                const response = await fetch('questions.html');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const text = await response.text();
-                console.log('Fetched text:', text);  // Debugging: Check if the file is fetched correctly
-                const data = JSON.parse(new DOMParser().parseFromString(text, 'text/html').querySelector('#quiz-data').textContent);
-                console.log('Parsed data:', data);  // Debugging: Check if the JSON is parsed correctly
-                return data;
-            } catch (error) {
-                console.error('Failed to load questions:', error);
-                return [];  // Return an empty array on failure
-            }
+        // Function to load questions from the embedded JSON in the index.html
+        function loadQuestions() {
+            const text = document.getElementById('quiz-data').textContent;
+            const data = JSON.parse(text);
+            return data;
         }
 
         // Load questions and start the quiz
-        loadQuestions().then(quiz => {
-            if (quiz.length === 0) {
-                document.getElementById('question').innerText = "Failed to load questions.";
-                return;
+        const quiz = loadQuestions();
+
+        function loadQuestion() {
+            const randomIndex = Math.floor(Math.random() * quiz.length);
+            const questionData = quiz[randomIndex];
+
+            document.getElementById('question').innerText = questionData.question;
+
+            const buttons = document.querySelectorAll('#options button');
+            buttons.forEach((btn, index) => {
+                const optionKey = Object.keys(questionData.options)[index];
+                const optionValue = Object.values(questionData.options)[index];
+                btn.innerText = `${optionKey}: ${optionValue}`;
+                btn.disabled = false;
+                btn.onclick = function() {
+                    checkAnswer(optionKey, questionData);
+                };
+            });
+
+            document.getElementById('feedback').innerText = "";
+            document.getElementById('next-button').style.display = 'none';
+        }
+
+        function checkAnswer(selected, questionData) {
+            if (selected === questionData.correct) {
+                document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+            } else {
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
             }
 
-            // Function to load a new question
-            function loadQuestion() {
-                const randomIndex = Math.floor(Math.random() * quiz.length);
-                const questionData = quiz[randomIndex];
+            document.querySelectorAll('#options button').forEach(btn => btn.disabled = true);
+            document.getElementById('next-button').style.display = 'block';
+        }
 
-                document.getElementById('question').innerText = questionData.question;
+        document.getElementById('next-button').onclick = loadQuestion;
 
-                const buttons = document.querySelectorAll('#options button');
-                buttons.forEach((btn, index) => {
-                    const optionKey = Object.keys(questionData.options)[index];
-                    const optionValue = Object.values(questionData.options)[index];
-                    btn.innerText = `${optionKey}: ${optionValue}`;
-                    btn.disabled = false;
-                    btn.onclick = function () {
-                        checkAnswer(optionKey, questionData);
-                    };
-                });
-
-                document.getElementById('feedback').innerText = "";
-                document.getElementById('next-button').style.display = 'none';
-            }
-
-            // Function to check the selected answer
-            function checkAnswer(selected, questionData) {
-                if (selected === questionData.correct) {
-                    document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
-                } else {
-                    document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.correct + ". " + questionData.explanation;
-                }
-
-                document.querySelectorAll('#options button').forEach(btn => btn.disabled = true);
-                document.getElementById('next-button').style.display = 'block';
-            }
-
-            document.getElementById('next-button').onclick = loadQuestion;
-
-            // Initial load of a question
-            loadQuestion();
-        });
+        // Initial load of a question
+        loadQuestion();
     </script>
 </body>
 </html>
