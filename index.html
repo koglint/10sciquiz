@@ -226,8 +226,10 @@
             // Disable buttons after selection
             document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
-            // Show the "Next Question" button
-            document.getElementById('next-button').style.display = 'block';
+            // Show the "Next Question" button if not the last question in scored mode
+            if (!(quizMode === 'scored' && questionCount >= 20)) {
+                document.getElementById('next-button').style.display = 'block';
+            }
         }
 
         // Function to end the quiz in scored mode
