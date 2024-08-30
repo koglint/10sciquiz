@@ -1,1 +1,1465 @@
-
+[
+  {
+    "question": "What is the first step in developing a scientific investigation?",
+    "options": [
+      "a) Conducting an experiment",
+      "b) Developing a hypothesis",
+      "c) Collecting data",
+      "d) Analysing results"
+    ],
+    "answer": "b",
+    "explanation": "The first step in scientific investigation is developing a hypothesis to be tested."
+  },
+  {
+    "question": "In a valid experimental method, the independent variable is:",
+    "options": [
+      "a) The variable that is measured",
+      "b) The variable that is kept constant",
+      "c) The variable that is changed",
+      "d) The variable that is compared"
+    ],
+    "answer": "c",
+    "explanation": "The independent variable is the one that is intentionally changed in an experiment."
+  },
+  {
+    "question": "Which of the following represents a dependent variable in an experiment?",
+    "options": [
+      "a) The type of plant used",
+      "b) The amount of sunlight given",
+      "c) The height of the plant",
+      "d) The soil type"
+    ],
+    "answer": "c",
+    "explanation": "The dependent variable is what you measure in the experiment."
+  },
+  {
+    "question": "Safety procedures during an experiment are important because:",
+    "options": [
+      "a) They ensure the experiment is completed quickly",
+      "b) They protect the integrity of the data",
+      "c) They ensure that accurate results are obtained",
+      "d) They protect individuals from harm"
+    ],
+    "answer": "d",
+    "explanation": "Safety procedures ensure that experiments are conducted without causing harm."
+  },
+  {
+    "question": "What is the purpose of constructing a graph from experimental results?",
+    "options": [
+      "a) To prove a hypothesis correct",
+      "b) To visually represent the data for analysis",
+      "c) To make the report look professional",
+      "d) To compare the results with other experiments"
+    ],
+    "answer": "b",
+    "explanation": "Graphs help in visualizing data to identify trends and patterns."
+  },
+  {
+    "question": "Evaluating the reliability of experimental results involves:",
+    "options": [
+      "a) Checking if the experiment can be replicated",
+      "b) Changing the experiment parameters",
+      "c) Ignoring anomalies in the data",
+      "d) Comparing results with another group"
+    ],
+    "answer": "a",
+    "explanation": "Reliability involves seeing if results can be consistently reproduced."
+  },
+  {
+    "question": "A control variable in an experiment:",
+    "options": [
+      "a) Is changed to see the effect",
+      "b) Is kept constant throughout the experiment",
+      "c) Is used to calibrate equipment",
+      "d) Is measured during the experiment"
+    ],
+    "answer": "b",
+    "explanation": "Control variables are kept constant to ensure a fair test."
+  },
+  {
+    "question": "Why is it important to communicate findings in a complete scientific report?",
+    "options": [
+      "a) To share results with the scientific community",
+      "b) To get a good grade in science class",
+      "c) To increase the length of the report",
+      "d) To simplify the experiment process"
+    ],
+    "answer": "a",
+    "explanation": "Communicating findings is essential for contributing to scientific knowledge."
+  },
+  {
+    "question": "When analysing second-hand sources, which of the following is most critical?",
+    "options": [
+      "a) The popularity of the source",
+      "b) The date of publication",
+      "c) The validity and reliability of the information",
+      "d) The length of the document"
+    ],
+    "answer": "c",
+    "explanation": "Evaluating sources involves assessing their reliability and relevance."
+  },
+  {
+    "question": "Which component is NOT included in a complete scientific report?",
+    "options": [
+      "a) Opinions",
+      "b) Hypothesis",
+      "c) Conclusion",
+      "d) Bibliography"
+    ],
+    "answer": "a",
+    "explanation": "A complete scientific report includes only valid, accurate, and reliable information."
+  },
+  {
+    "question": "What is a biotic component of an ecosystem?",
+    "options": [
+      "a) Water",
+      "b) Soil",
+      "c) Sunlight",
+      "d) Plants"
+    ],
+    "answer": "d",
+    "explanation": "Plants are living (biotic) components of ecosystems."
+  },
+  {
+    "question": "In a food web, energy primarily flows from:",
+    "options": [
+      "a) Producers to consumers",
+      "b) Consumers to producers",
+      "c) Decomposers to producers",
+      "d) Consumers to decomposers"
+    ],
+    "answer": "a",
+    "explanation": "Energy flows from producers to consumers in a food web."
+  },
+  {
+    "question": "How does an increase in predator population affect the prey population?",
+    "options": [
+      "a) The prey population increases",
+      "b) The prey population decreases",
+      "c) There is no effect",
+      "d) The prey population remains constant"
+    ],
+    "answer": "b",
+    "explanation": "An increase in predators typically leads to a decrease in prey populations."
+  },
+  {
+    "question": "What process is involved in the cycling of nitrogen through an ecosystem?",
+    "options": [
+      "a) Photosynthesis",
+      "b) Decomposition",
+      "c) Respiration",
+      "d) Evaporation"
+    ],
+    "answer": "b",
+    "explanation": "Nitrogen is cycled through ecosystems via processes like decomposition."
+  },
+  {
+    "question": "Which of the following spheres is involved in the carbon cycle?",
+    "options": [
+      "a) Atmosphere",
+      "b) Lithosphere",
+      "c) Hydrosphere",
+      "d) All of the above"
+    ],
+    "answer": "d",
+    "explanation": "The carbon cycle involves interactions between the atmosphere, lithosphere, hydrosphere, and biosphere."
+  },
+  {
+    "question": "Human activity has contributed to the greenhouse effect primarily through:",
+    "options": [
+      "a) Deforestation",
+      "b) Urbanization",
+      "c) Industrial emissions",
+      "d) Overfishing"
+    ],
+    "answer": "c",
+    "explanation": "Industrial activities release greenhouse gases, contributing to the greenhouse effect."
+  },
+  {
+    "question": "The depletion of the ozone layer has been linked to the use of:",
+    "options": [
+      "a) Fossil fuels",
+      "b) Chlorofluorocarbons (CFCs)",
+      "c) Pesticides",
+      "d) Nuclear energy"
+    ],
+    "answer": "b",
+    "explanation": "CFCs have been linked to ozone layer depletion."
+  },
+  {
+    "question": "Rising sea levels are a direct consequence of:",
+    "options": [
+      "a) Increased volcanic activity",
+      "b) Melting polar ice caps",
+      "c) Deforestation",
+      "d) Air pollution"
+    ],
+    "answer": "b",
+    "explanation": "Rising sea levels are caused by the melting of polar ice caps."
+  },
+  {
+    "question": "Which human activity significantly impacts biodiversity loss?",
+    "options": [
+      "a) Urban expansion",
+      "b) Recycling programs",
+      "c) Organic farming",
+      "d) Public transportation"
+    ],
+    "answer": "a",
+    "explanation": "Urbanization leads to habitat destruction and loss of biodiversity."
+  },
+  {
+    "question": "Which of the following is an advantage of sexual reproduction?",
+    "options": [
+      "a) Produces genetically identical offspring",
+      "b) Faster reproduction rate",
+      "c) Greater genetic diversity",
+      "d) Requires only one parent"
+    ],
+    "answer": "c",
+    "explanation": "Sexual reproduction increases genetic diversity, which is advantageous for populations."
+  },
+  {
+    "question": "The primary function of the ovaries in the female reproductive system is to:",
+    "options": [
+      "a) Produce sperm",
+      "b) Produce eggs and hormones",
+      "c) Nourish the embryo",
+      "d) Facilitate fertilization"
+    ],
+    "answer": "b",
+    "explanation": "The ovaries produce eggs and hormones like estrogen."
+  },
+  {
+    "question": "Which hormone is responsible for the regulation of the menstrual cycle?",
+    "options": [
+      "a) Testosterone",
+      "b) Estrogen",
+      "c) Insulin",
+      "d) Thyroxine"
+    ],
+    "answer": "b",
+    "explanation": "Estrogen plays a key role in regulating the menstrual cycle."
+  },
+  {
+    "question": "Which method of contraception is classified as a barrier method?",
+    "options": [
+      "a) Birth control pills",
+      "b) Condoms",
+      "c) Sterilization",
+      "d) Intrauterine device (IUD)"
+    ],
+    "answer": "b",
+    "explanation": "Condoms are a type of barrier contraception."
+  },
+  {
+    "question": "Heritable characteristics are transmitted from one generation to the next through:",
+    "options": [
+      "a) Proteins",
+      "b) RNA",
+      "c) DNA",
+      "d) Lipids"
+    ],
+    "answer": "c",
+    "explanation": "DNA carries the genetic information that is passed from one generation to the next."
+  },
+  {
+    "question": "The structure of DNA is best described as:",
+    "options": [
+      "a) A single helix",
+      "b) A double helix",
+      "c) A triple helix",
+      "d) A quadruple helix"
+    ],
+    "answer": "b",
+    "explanation": "DNA is structured as a double helix."
+  },
+  {
+    "question": "Mitosis is a process that results in:",
+    "options": [
+      "a) The production of gametes",
+      "b) The formation of two identical daughter cells",
+      "c) The reduction of chromosome number by half",
+      "d) The creation of new genetic material"
+    ],
+    "answer": "b",
+    "explanation": "Mitosis results in two identical cells."
+  },
+  {
+    "question": "A mutation in a gene can lead to:",
+    "options": [
+      "a) The formation of identical offspring",
+      "b) An increase in genetic diversity",
+      "c) The elimination of genetic traits",
+      "d) No observable changes"
+    ],
+    "answer": "b",
+    "explanation": "Mutations can increase genetic diversity within a population."
+  },
+  {
+    "question": "The process by which haploid (body) cells are formed is called:",
+    "options": [
+      "a) Mitosis",
+      "b) Meiosis",
+      "c) Fertilization",
+      "d) Mutation"
+    ],
+    "answer": "b",
+    "explanation": "Meiosis is the process that forms haploid cells (gametes)."
+  },
+  {
+    "question": "A dominant characteristic will appear in the phenotype if:",
+    "options": [
+      "a) Only one allele is present",
+      "b) Both alleles are recessive",
+      "c) Only one allele is recessive",
+      "d) Both alleles are dominant"
+    ],
+    "answer": "a",
+    "explanation": "A dominant characteristic will appear in the phenotype if at least one dominant allele is present."
+  },
+  {
+    "question": "Speed is defined as:",
+    "options": [
+      "a) Distance divided by time",
+      "b) Time divided by distance",
+      "c) Force divided by mass",
+      "d) Acceleration multiplied by mass"
+    ],
+    "answer": "a",
+    "explanation": "Speed is calculated as the distance travelled divided by the time taken."
+  },
+  {
+    "question": "Velocity differs from speed in that velocity:",
+    "options": [
+      "a) Is a scalar quantity",
+      "b) Has both magnitude and direction",
+      "c) Is measured in meters per second squared",
+      "d) Is independent of direction"
+    ],
+    "answer": "b",
+    "explanation": "Velocity is a vector quantity, meaning it includes both speed and direction."
+  },
+  {
+    "question": "According to Newton’s second law of motion, force equals:",
+    "options": [
+      "a) Mass times velocity",
+      "b) Mass times acceleration",
+      "c) Acceleration times distance",
+      "d) Mass divided by acceleration"
+    ],
+    "answer": "b",
+    "explanation": "According to Newton's second law, force equals mass times acceleration."
+  },
+  {
+    "question": "A free-body diagram is used to:",
+    "options": [
+      "a) Measure the distance travelled",
+      "b) Determine the net force acting on an object",
+      "c) Identify the velocity of an object",
+      "d) Show the path of an object"
+    ],
+    "answer": "b",
+    "explanation": "Free-body diagrams are used to show all the forces acting on an object."
+  },
+  {
+    "question": "Displacement is related to:",
+    "options": [
+      "a) The total distance travelled",
+      "b) The change in position of an object",
+      "c) The time taken for a journey",
+      "d) The speed of an object"
+    ],
+    "answer": "b",
+    "explanation": "Displacement refers to how far out of place an object is; it is the object's overall change in position."
+  },
+  {
+    "question": "Which of the following is an application of Newton’s first law of motion?",
+    "options": [
+      "a) A car accelerating when the gas pedal is pressed",
+      "b) A ball remaining at rest until kicked",
+      "c) A rocket launching into space",
+      "d) A satellite orbiting the Earth"
+    ],
+    "answer": "b",
+    "explanation": "Newton's first law states that an object at rest stays at rest unless acted upon by a force."
+  },
+  {
+    "question": "Newton’s third law of motion states that:",
+    "options": [
+      "a) Every action has an equal and opposite reaction",
+      "b) Force equals mass times acceleration",
+      "c) Objects in motion stay in motion",
+      "d) Energy cannot be created or destroyed"
+    ],
+    "answer": "a",
+    "explanation": "Newton’s third law of motion."
+  },
+  {
+    "question": "In space travel, Newton's laws are applied to:",
+    "options": [
+      "a) Predict the movement of celestial bodies",
+      "b) Design propulsion systems for spacecraft",
+      "c) Determine the amount of fuel needed",
+      "d) All of the above"
+    ],
+    "answer": "d",
+    "explanation": "Newton's laws are essential for understanding space travel."
+  },
+  {
+    "question": "Acceleration is defined as:",
+    "options": [
+      "a) Change in speed over time",
+      "b) Distance divided by time",
+      "c) Mass divided by force",
+      "d) The rate at which an object falls"
+    ],
+    "answer": "a",
+    "explanation": "Acceleration is the rate of change of velocity with respect to time."
+  },
+  {
+    "question": "Which of the following demonstrates Newton’s second law?",
+    "options": [
+      "a) A heavier object requires more force to move",
+      "b) An object at rest remains at rest",
+      "c) A bullet moves in the opposite direction of the fired gun",
+      "d) Energy is transferred when a ball is thrown"
+    ],
+    "answer": "a",
+    "explanation": "This demonstrates Newton’s second law."
+  },
+  {
+    "question": "An atom consists of:",
+    "options": [
+      "a) Protons, neutrons, and electrons",
+      "b) Molecules and compounds",
+      "c) Ions and isotopes",
+      "d) Elements and compounds"
+    ],
+    "answer": "a",
+    "explanation": "These are the three basic particles that make up an atom."
+  },
+  {
+    "question": "The law of conservation of mass states that:",
+    "options": [
+      "a) Matter is created during a chemical reaction",
+      "b) Mass is lost in a physical change",
+      "c) Mass is conserved in a chemical reaction",
+      "d) Mass increases with temperature"
+    ],
+    "answer": "c",
+    "explanation": "According to the law of conservation of mass, mass cannot be created or destroyed."
+  },
+  {
+    "question": "A substance that tastes sour and turns blue litmus paper red is likely a(n):",
+    "options": [
+      "a) Acid",
+      "b) Base",
+      "c) Salt",
+      "d) Alkali"
+    ],
+    "answer": "a",
+    "explanation": "Acids typically taste sour and turn blue litmus paper red."
+  },
+  {
+    "question": "Neutralisation is the reaction between:",
+    "options": [
+      "a) An acid and a base",
+      "b) A metal and a non-metal",
+      "c) A solid and a liquid",
+      "d) A gas and a plasma"
+    ],
+    "answer": "a",
+    "explanation": "Neutralization is the reaction between an acid and a base."
+  },
+  {
+    "question": "Which of the following is a product of complete combustion?",
+    "options": [
+      "a) Carbon monoxide",
+      "b) Water vapor",
+      "c) Sulfur dioxide",
+      "d) Nitrogen dioxide"
+    ],
+    "answer": "b",
+    "explanation": "Complete combustion produces water vapor and carbon dioxide."
+  },
+  {
+    "question": "A catalyst:",
+    "options": [
+      "a) Slows down a chemical reaction",
+      "b) Speeds up a chemical reaction",
+      "c) Is consumed during a chemical reaction",
+      "d) Has no effect on a chemical reaction"
+    ],
+    "answer": "b",
+    "explanation": "A catalyst increases the rate of a chemical reaction."
+  },
+  {
+    "question": "Respiration in humans is an example of:",
+    "options": [
+      "a) An exothermic reaction",
+      "b) An endothermic reaction",
+      "c) A precipitation reaction",
+      "d) A decomposition reaction"
+    ],
+    "answer": "a",
+    "explanation": "Respiration releases energy, making it an exothermic reaction."
+  },
+  {
+    "question": "Which factor does NOT affect the rate of a chemical reaction?",
+    "options": [
+      "a) Temperature",
+      "b) Surface area",
+      "c) Colour of reactants",
+      "d) Concentration of reactants"
+    ],
+    "answer": "c",
+    "explanation": "Colour typically does not affect the rate of a chemical reaction."
+  },
+  {
+    "question": "The process of corrosion can be prevented by:",
+    "options": [
+      "a) Increasing the temperature",
+      "b) Applying a protective coating",
+      "c) Adding more water",
+      "d) Exposing it to air"
+    ],
+    "answer": "b",
+    "explanation": "Corrosion can be prevented by applying a coating to protect the material from the environment."
+  },
+  {
+    "question": "What is the primary function of chloroplasts (the green parts) in plant cells?",
+    "options": [
+      "a) Respiration",
+      "b) Photosynthesis",
+      "c) Protein synthesis",
+      "d) Cellular division"
+    ],
+    "answer": "b",
+    "explanation": "Chloroplasts are the site of photosynthesis in plant cells."
+  },
+  {
+    "question": "Which of the following best describes an ecosystem?",
+    "options": [
+      "a) A community of organisms interacting with each other and their physical environment",
+      "b) A group of the same species living in an area",
+      "c) A collection of abiotic factors in a region",
+      "d) A food chain with multiple trophic levels"
+    ],
+    "answer": "a",
+    "explanation": "An ecosystem includes both living organisms and their environment."
+  },
+  {
+    "question": "The role of decomposers in an ecosystem is to:",
+    "options": [
+      "a) Fix nitrogen in the soil",
+      "b) Break down dead organic material",
+      "c) Produce energy from sunlight",
+      "d) Create new organisms"
+    ],
+    "answer": "b",
+    "explanation": "Decomposers break down dead material, recycling nutrients back into the ecosystem."
+  },
+  {
+    "question": "Which gas is primarily responsible for the greenhouse effect?",
+    "options": [
+      "a) Oxygen",
+      "b) Carbon dioxide",
+      "c) Nitrogen",
+      "d) Hydrogen"
+    ],
+    "answer": "b",
+    "explanation": "Carbon dioxide is a major greenhouse gas contributing to the greenhouse effect."
+  },
+  {
+    "question": "Which of the following is a method used to measure biodiversity?",
+    "options": [
+      "a) Counting the number of species in an area",
+      "b) Measuring the amount of rainfall in an ecosystem",
+      "c) Analysing the pH of the soil",
+      "d) Estimating the carbon footprint"
+    ],
+    "answer": "a",
+    "explanation": "Biodiversity is often measured by species richness in an ecosystem."
+  },
+  {
+    "question": "Which of the following processes produces gametes (sex cells; sperm and eggs)?",
+    "options": [
+      "a) Mitosis",
+      "b) Meiosis",
+      "c) Fertilization",
+      "d) Mutation"
+    ],
+    "answer": "b",
+    "explanation": "Meiosis produces gametes with half the number of chromosomes of the parent cell."
+  },
+  {
+    "question": "Which of the following is an example of a renewable resource?",
+    "options": [
+      "a) Coal",
+      "b) Natural gas",
+      "c) Solar energy",
+      "d) Nuclear energy"
+    ],
+    "answer": "c",
+    "explanation": "Solar energy is a renewable resource."
+  },
+  {
+    "question": "The introduction of a non-native species to an ecosystem can lead to:",
+    "options": [
+      "a) Increased biodiversity",
+      "b) The extinction of native species",
+      "c) Greater ecological balance",
+      "d) Improved habitat quality"
+    ],
+    "answer": "b",
+    "explanation": "Non-native species can outcompete native species, leading to extinctions."
+  },
+  {
+    "question": "A Punnett square is used to:",
+    "options": [
+      "a) Determine the speed of a chemical reaction",
+      "b) Predict the probability of an offspring's genotype",
+      "c) Identify the stages of mitosis",
+      "d) Measure the density of a population"
+    ],
+    "answer": "b",
+    "explanation": "Punnett squares are used to predict the likelihood of inheriting specific traits."
+  },
+  {
+    "question": "Which of the following is an example of an exothermic reaction?",
+    "options": [
+      "a) Melting ice",
+      "b) Dissolving salt in water",
+      "c) Combustion of gasoline",
+      "d) Photosynthesis"
+    ],
+    "answer": "c",
+    "explanation": "Combustion reactions release energy, making them exothermic."
+  },
+  {
+    "question": "The pH scale is used to measure:",
+    "options": [
+      "a) The concentration of salt in a solution",
+      "b) The acidity or alkalinity of a substance",
+      "c) The rate of evaporation",
+      "d) The temperature of a liquid"
+    ],
+    "answer": "b",
+    "explanation": "The pH scale measures how acidic or basic a substance is."
+  },
+  {
+    "question": "An increase in greenhouse gases is most likely to cause:",
+    "options": [
+      "a) Global cooling",
+      "b) An increase in the Earth's temperature",
+      "c) A decrease in sea levels",
+      "d) More frequent volcanic eruptions"
+    ],
+    "answer": "b",
+    "explanation": "Greenhouse gases trap heat, leading to global warming."
+  },
+  {
+    "question": "Which type of reproduction involves two parents and results in genetically diverse offspring?",
+    "options": [
+      "a) Asexual reproduction",
+      "b) Binary fission",
+      "c) Sexual reproduction",
+      "d) Budding"
+    ],
+    "answer": "c",
+    "explanation": "Sexual reproduction involves two parents and results in genetically diverse offspring."
+  },
+  {
+    "question": "What is the main source of energy for life on Earth?",
+    "options": [
+      "a) The Moon",
+      "b) The Sun",
+      "c) Fossil fuels",
+      "d) Earth's core"
+    ],
+    "answer": "b",
+    "explanation": "The Sun is the primary source of energy for life on Earth."
+  },
+  {
+    "question": "Which of the following is an abiotic factor in an ecosystem?",
+    "options": [
+      "a) Plants",
+      "b) Animals",
+      "c) Temperature",
+      "d) Fungi"
+    ],
+    "answer": "c",
+    "explanation": "Temperature is an abiotic factor affecting ecosystems."
+  },
+  {
+    "question": "The process by which plants convert sunlight into chemical energy is called:",
+    "options": [
+      "a) Respiration",
+      "b) Photosynthesis",
+      "c) Digestion",
+      "d) Fermentation"
+    ],
+    "answer": "b",
+    "explanation": "Photosynthesis is the process by which plants convert sunlight into chemical energy."
+  },
+  {
+    "question": "Which of the following correctly describes the structure of a water molecule?",
+    "options": [
+      "a) One hydrogen atom and two oxygen atoms",
+      "b) Two hydrogen atoms and one oxygen atom",
+      "c) One hydrogen atom and one oxygen atom",
+      "d) Two oxygen atoms and one hydrogen atom"
+    ],
+    "answer": "b",
+    "explanation": "Water is composed of two hydrogen atoms and one oxygen atom."
+  },
+  {
+    "question": "Which of the following is a biotic factor that can affect the size of a population?",
+    "options": [
+      "a) Temperature",
+      "b) Food availability",
+      "c) Water supply",
+      "d) Soil pH"
+    ],
+    "answer": "b",
+    "explanation": "The availability of food is a biotic factor that can influence population size."
+  },
+  {
+    "question": "Which process describes the splitting of water during photosynthesis?",
+    "options": [
+      "a) Photolysis",
+      "b) Glycolysis",
+      "c) Fermentation",
+      "d) Oxidation"
+    ],
+    "answer": "a",
+    "explanation": "Photolysis is the process of splitting water molecules during photosynthesis."
+  },
+  {
+    "question": "Which gas is a byproduct of photosynthesis?",
+    "options": [
+      "a) Carbon dioxide",
+      "b) Oxygen",
+      "c) Nitrogen",
+      "d) Methane"
+    ],
+    "answer": "b",
+    "explanation": "Oxygen is released as a byproduct of photosynthesis."
+  },
+  {
+    "question": "Which of the following correctly describes meiosis?",
+    "options": [
+      "a) A single cell division that results in two identical daughter cells",
+      "b) A double cell division that results in four genetically unique gametes",
+      "c) A type of asexual reproduction",
+      "d) The fusion of gametes to form a zygote"
+    ],
+    "answer": "b",
+    "explanation": "Meiosis produces four genetically diverse gametes."
+  },
+  {
+    "question": "What is the main consequence of ozone layer depletion?",
+    "options": [
+      "a) Increased global warming",
+      "b) Increased UV radiation reaching the Earth's surface",
+      "c) Decreased biodiversity",
+      "d) More frequent natural disasters"
+    ],
+    "answer": "b",
+    "explanation": "Ozone layer depletion allows more harmful UV radiation to reach Earth."
+  },
+  {
+    "question": "Which of the following is an example of a chemical reaction?",
+    "options": [
+      "a) Freezing of water",
+      "b) Melting of wax",
+      "c) Baking a cake",
+      "d) Cutting paper"
+    ],
+    "answer": "c",
+    "explanation": "Baking a cake involves chemical reactions that produce new substances."
+  },
+  {
+    "question": "Which element is most abundant in the Earth's atmosphere?",
+    "options": [
+      "a) Oxygen",
+      "b) Hydrogen",
+      "c) Nitrogen",
+      "d) Carbon dioxide"
+    ],
+    "answer": "c",
+    "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere."
+  },
+  {
+    "question": "Which of the following best describes the function of mitochondria in cells?",
+    "options": [
+      "a) Photosynthesis",
+      "b) Cellular respiration",
+      "c) Protein synthesis",
+      "d) DNA replication"
+    ],
+    "answer": "b",
+    "explanation": "Mitochondria are the powerhouses of the cell, where cellular respiration occurs."
+  },
+  {
+    "question": "Which of the following correctly describes the nitrogen cycle?",
+    "options": [
+      "a) The process by which nitrogen is absorbed by plants and passed through the food chain",
+      "b) The conversion of nitrogen gas into ammonia by bacteria",
+      "c) The release of nitrogen gas into the atmosphere by decomposers",
+      "d) All of the above"
+    ],
+    "answer": "d",
+    "explanation": "The nitrogen cycle includes absorption by plants, conversion by bacteria, and release by decomposers."
+  },
+  {
+    "question": "Which of the following is NOT a greenhouse gas?",
+    "options": [
+      "a) Carbon dioxide",
+      "b) Methane",
+      "c) Nitrous oxide",
+      "d) Oxygen"
+    ],
+    "answer": "d",
+    "explanation": "Oxygen is not a greenhouse gas."
+  },
+  {
+    "question": "What is the role of the ozone layer in the Earth's atmosphere?",
+    "options": [
+      "a) To trap heat and warm the Earth",
+      "b) To reflect sunlight back into space",
+      "c) To absorb and block harmful UV radiation",
+      "d) To provide oxygen for respiration"
+    ],
+    "answer": "c",
+    "explanation": "The ozone layer protects life on Earth by absorbing UV radiation."
+  },
+  {
+    "question": "What is the effect of increasing temperature on the rate of a chemical reaction?",
+    "options": [
+      "a) It decreases the rate",
+      "b) It has no effect",
+      "c) It increases the rate",
+      "d) It depends on the reactants"
+    ],
+    "answer": "c",
+    "explanation": "Increasing temperature typically speeds up chemical reactions."
+  },
+  {
+    "question": "Which of the following is an example of a symbiotic relationship?",
+    "options": [
+      "a) A lion hunting a zebra",
+      "b) A bee pollinating a flower",
+      "c) A tree absorbing sunlight",
+      "d) A bird migrating south for the winter"
+    ],
+    "answer": "b",
+    "explanation": "Pollination is a symbiotic relationship between bees and flowers."
+  },
+  {
+    "question": "Which type of organism is typically at the top of a food chain?",
+    "options": [
+      "a) Producers",
+      "b) Herbivores",
+      "c) Carnivores",
+      "d) Decomposers"
+    ],
+    "answer": "c",
+    "explanation": "Carnivores are typically at the top of the food chain."
+  },
+  {
+    "question": "The primary purpose of cellular respiration is to:",
+    "options": [
+      "a) Produce glucose",
+      "b) Break down proteins",
+      "c) Release energy from food molecules",
+      "d) Store energy in the form of fat"
+    ],
+    "answer": "c",
+    "explanation": "Cellular respiration releases energy stored in food."
+  },
+  {
+    "question": "What is the main purpose of mitosis?",
+    "options": [
+      "a) To produce gametes for sexual reproduction",
+      "b) To repair damaged tissues",
+      "c) To create new genetic combinations",
+      "d) To maintain genetic diversity"
+    ],
+    "answer": "b",
+    "explanation": "Mitosis is important for growth and repair in organisms."
+  },
+  {
+    "question": "The carbon cycle involves the movement of carbon:",
+    "options": [
+      "a) Between the atmosphere, hydrosphere, lithosphere, and biosphere",
+      "b) From the sun to the Earth",
+      "c) Between different layers of the Earth's crust",
+      "d) Through the process of nuclear fusion"
+    ],
+    "answer": "a",
+    "explanation": "The carbon cycle involves the movement of carbon through Earth's systems."
+  },
+  {
+    "question": "What is the relationship between force and acceleration according to Newton's second law?",
+    "options": [
+      "a) Force is directly proportional to acceleration",
+      "b) Force is inversely proportional to acceleration",
+      "c) Force is equal to mass divided by acceleration",
+      "d) Force is not related to acceleration"
+    ],
+    "answer": "a",
+    "explanation": "According to Newton's second law, force is proportional to acceleration."
+  },
+  {
+    "question": "Which law explains why a car passenger moves forward when the car suddenly stops?",
+    "options": [
+      "a) Newton's First Law",
+      "b) Newton's Second Law",
+      "c) Newton's Third Law",
+      "d) Law of Universal Gravitation"
+    ],
+    "answer": "a",
+    "explanation": "Explains inertia, where an object will continue its state of motion unless acted upon by an external force."
+  },
+  {
+    "question": "What force is required to accelerate a 2 kg mass at 3 m/s²?",
+    "options": [
+      "a) 6 N",
+      "b) 3 N",
+      "c) 2 N",
+      "d) 5 N"
+    ],
+    "answer": "a",
+    "explanation": "Force = mass × acceleration, so 2 kg × 3 m/s² = 6 N."
+  },
+  {
+    "question": "According to Newton's First Law, an object in motion will:",
+    "options": [
+      "a) Eventually stop",
+      "b) Continue moving at a constant speed unless acted upon by an external force",
+      "c) Accelerate",
+      "d) Change direction"
+    ],
+    "answer": "b",
+    "explanation": "This describes inertia, as per Newton's First Law."
+  },
+  {
+    "question": "Newton's Third Law states that for every action, there is an:",
+    "options": [
+      "a) Equal and opposite reaction",
+      "b) Unequal and opposite reaction",
+      "c) Equal and similar action",
+      "d) Opposite and unequal force"
+    ],
+    "answer": "a",
+    "explanation": "Newton's Third Law states that every action has an equal and opposite reaction."
+  },
+  {
+    "question": "If an object is at rest, what can be said about the forces acting on it?",
+    "options": [
+      "a) They are balanced",
+      "b) They are unbalanced",
+      "c) No forces are acting",
+      "d) They are equal and opposite"
+    ],
+    "answer": "a",
+    "explanation": "For an object to remain at rest, all forces acting on it must be balanced."
+  },
+  {
+    "question": "In a food chain, the primary source of energy is:",
+    "options": [
+      "a) The Sun",
+      "b) Producers",
+      "c) Consumers",
+      "d) Decomposers"
+    ],
+    "answer": "a",
+    "explanation": "The Sun is the ultimate source of energy for most food chains."
+  },
+  {
+    "question": "Which of the following is a primary consumer?",
+    "options": [
+      "a) Grasshopper",
+      "b) Lion",
+      "c) Eagle",
+      "d) Snake"
+    ],
+    "answer": "a",
+    "explanation": "A grasshopper is a herbivore and primary consumer in the food chain."
+  },
+  {
+    "question": "What is the role of decomposers in a food web?",
+    "options": [
+      "a) They break down dead organisms",
+      "b) They produce food through photosynthesis",
+      "c) They hunt for food",
+      "d) They store energy"
+    ],
+    "answer": "a",
+    "explanation": "Decomposers break down dead matter, recycling nutrients back into the ecosystem."
+  },
+  {
+    "question": "In a food chain, which organism is at the top?",
+    "options": [
+      "a) Apex predator",
+      "b) Producer",
+      "c) Herbivore",
+      "d) Primary consumer"
+    ],
+    "answer": "a",
+    "explanation": "The apex predator is at the top of the food chain with no natural predators."
+  },
+  {
+    "question": "Which of these is an example of a tertiary consumer?",
+    "options": [
+      "a) Shark",
+      "b) Rabbit",
+      "c) Grass",
+      "d) Mouse"
+    ],
+    "answer": "a",
+    "explanation": "Sharks are tertiary consumers, often at the top of marine food chains."
+  },
+  {
+    "question": "In a valid experiment, what must be kept the same?",
+    "options": [
+      "a) Controlled variables",
+      "b) Independent variable",
+      "c) Dependent variable",
+      "d) Random variables"
+    ],
+    "answer": "a",
+    "explanation": "Controlled variables are variables kept constant to ensure the validity of an experiment."
+  },
+  {
+    "question": "Which type of data increases reliability?",
+    "options": [
+      "a) Repeated measurements",
+      "b) Incorrect measurements",
+      "c) Random errors",
+      "d) Uncontrolled variables"
+    ],
+    "answer": "a",
+    "explanation": "Repetition increases reliability by reducing random errors."
+  },
+  {
+    "question": "Accuracy in an experiment refers to:",
+    "options": [
+      "a) How close the results are to the true value",
+      "b) How many times the experiment is repeated",
+      "c) The ability to control variables",
+      "d) The number of trials conducted"
+    ],
+    "answer": "a",
+    "explanation": "Accuracy refers to the closeness of measurements to the true value."
+  },
+  {
+    "question": "Which of the following improves the reliability of an experiment?",
+    "options": [
+      "a) Repeating the experiment multiple times",
+      "b) Measuring with a faulty instrument",
+      "c) Ignoring outliers",
+      "d) Changing the independent variable"
+    ],
+    "answer": "a",
+    "explanation": "Repetition helps to ensure consistent results, improving reliability."
+  },
+  {
+    "question": "In a scientific investigation, what is the dependent variable?",
+    "options": [
+      "a) The variable being measured",
+      "b) The variable being changed",
+      "c) The variable kept the same",
+      "d) The variable not included"
+    ],
+    "answer": "a",
+    "explanation": "The dependent variable is the one being observed and measured in an experiment."
+  },
+  {
+    "question": "Which of the following pairs correctly matches DNA base pairs?",
+    "options": [
+      "a) Adenine-Thymine",
+      "b) Adenine-Cytosine",
+      "c) Thymine-Guanine",
+      "d) Cytosine-Thymine"
+    ],
+    "answer": "a",
+    "explanation": "In DNA, adenine pairs with thymine, and cytosine pairs with guanine."
+  },
+  {
+    "question": "What is the shape of a DNA molecule?",
+    "options": [
+      "a) Double helix",
+      "b) Single strand",
+      "c) Triple helix",
+      "d) Spiral loop"
+    ],
+    "answer": "a",
+    "explanation": "DNA has a double helix structure, consisting of two strands twisted around each other."
+  },
+  {
+    "question": "DNA is made up of units called:",
+    "options": [
+      "a) Nucleotides",
+      "b) Amino acids",
+      "c) Proteins",
+      "d) Lipids"
+    ],
+    "answer": "a",
+    "explanation": "DNA is made up of nucleotides, which are the basic units of genetic material."
+  },
+  {
+    "question": "Which of these is a component of a nucleotide?",
+    "options": [
+      "a) Sugar",
+      "b) Enzyme",
+      "c) Protein",
+      "d) Lipid"
+    ],
+    "answer": "a",
+    "explanation": "Each nucleotide in DNA contains a sugar molecule, a phosphate group, and a nitrogenous base."
+  },
+  {
+    "question": "The backbone of the DNA molecule is made up of:",
+    "options": [
+      "a) Sugar and phosphate",
+      "b) Base pairs",
+      "c) Enzymes",
+      "d) Lipids"
+    ],
+    "answer": "a",
+    "explanation": "The backbone of DNA consists of alternating sugar and phosphate groups."
+  },
+  {
+    "question": "Which of the following is a greenhouse gas?",
+    "options": [
+      "a) Carbon dioxide",
+      "b) Oxygen",
+      "c) Nitrogen",
+      "d) Helium"
+    ],
+    "answer": "a",
+    "explanation": "Carbon dioxide is a major greenhouse gas that contributes to global warming."
+  },
+  {
+    "question": "What is the main cause of climate change?",
+    "options": [
+      "a) Burning fossil fuels",
+      "b) Solar activity",
+      "c) Volcanoes",
+      "d) Ocean currents"
+    ],
+    "answer": "a",
+    "explanation": "The burning of fossil fuels releases large amounts of carbon dioxide, contributing to climate change."
+  },
+  {
+    "question": "What effect does deforestation have on the environment?",
+    "options": [
+      "a) Increases carbon dioxide levels",
+      "b) Decreases oxygen levels",
+      "c) Both a and b",
+      "d) No effect"
+    ],
+    "answer": "c",
+    "explanation": "Deforestation increases carbon dioxide levels and decreases oxygen levels in the atmosphere."
+  },
+  {
+    "question": "Which of these is a renewable energy source?",
+    "options": [
+      "a) Solar power",
+      "b) Coal",
+      "c) Natural gas",
+      "d) Oil"
+    ],
+    "answer": "a",
+    "explanation": "Solar energy is renewable and does not contribute to carbon emissions."
+  },
+  {
+    "question": "What is the effect of melting polar ice caps on sea levels?",
+    "options": [
+      "a) Sea levels rise",
+      "b) Sea levels fall",
+      "c) Sea levels stay the same",
+      "d) No effect"
+    ],
+    "answer": "a",
+    "explanation": "Melting polar ice caps contribute to rising sea levels, posing a threat to coastal regions."
+  },
+  {
+    "question": "An acid reacts with a base to form:",
+    "options": [
+      "a) Salt and water",
+      "b) Gas and water",
+      "c) Water only",
+      "d) Salt only"
+    ],
+    "answer": "a",
+    "explanation": "When an acid reacts with a base, it produces salt and water in a neutralization reaction."
+  },
+  {
+    "question": "Which of the following is a common acid?",
+    "options": [
+      "a) Hydrochloric acid",
+      "b) Sodium chloride",
+      "c) Potassium hydroxide",
+      "d) Calcium carbonate"
+    ],
+    "answer": "a",
+    "explanation": "Hydrochloric acid is a strong, common acid used in various applications."
+  },
+  {
+    "question": "A base reacts with an acid to produce:",
+    "options": [
+      "a) Salt and water",
+      "b) Carbon dioxide and water",
+      "c) Oxygen and water",
+      "d) Hydrogen and water"
+    ],
+    "answer": "a",
+    "explanation": "A base reacts with an acid to produce salt and water, a process known as neutralization."
+  },
+  {
+    "question": "What is the pH of a strong acid?",
+    "options": [
+      "a) Less than 7",
+      "b) Exactly 7",
+      "c) More than 7",
+      "d) Exactly 14"
+    ],
+    "answer": "a",
+    "explanation": "A strong acid has a pH of less than 7, indicating high acidity."
+  },
+  {
+    "question": "Which of the following is an example of a strong base?",
+    "options": [
+      "a) Sodium hydroxide",
+      "b) Hydrochloric acid",
+      "c) Carbon dioxide",
+      "d) Water"
+    ],
+    "answer": "a",
+    "explanation": "Sodium hydroxide is a strong base, commonly known as lye or caustic soda."
+  },
+  {
+    "question": "When an acid reacts with a metal, the products are:",
+    "options": [
+      "a) Salt and hydrogen gas",
+      "b) Water and carbon dioxide",
+      "c) Salt and water",
+      "d) Oxygen and water"
+    ],
+    "answer": "a",
+    "explanation": "Acids react with metals to produce salt and hydrogen gas."
+  },
+  {
+    "question": "Which of the following metals reacts vigorously with hydrochloric acid?",
+    "options": [
+      "a) Magnesium",
+      "b) Copper",
+      "c) Silver",
+      "d) Gold"
+    ],
+    "answer": "a",
+    "explanation": "Magnesium reacts vigorously with hydrochloric acid, producing hydrogen gas."
+  },
+  {
+    "question": "What gas is produced when a metal reacts with an acid?",
+    "options": [
+      "a) Hydrogen",
+      "b) Oxygen",
+      "c) Carbon dioxide",
+      "d) Nitrogen"
+    ],
+    "answer": "a",
+    "explanation": "Hydrogen gas is commonly produced when a metal reacts with an acid."
+  },
+  {
+    "question": "Which metal does not react with acids?",
+    "options": [
+      "a) Gold",
+      "b) Zinc",
+      "c) Iron",
+      "d) Magnesium"
+    ],
+    "answer": "a",
+    "explanation": "Gold is a noble metal and does not react with most acids."
+  },
+  {
+    "question": "Which of the following is a typical observation when a metal reacts with an acid?",
+    "options": [
+      "a) Bubbling or fizzing",
+      "b) Color change",
+      "c) Precipitate formation",
+      "d) No reaction"
+    ],
+    "answer": "a",
+    "explanation": "The reaction between a metal and an acid often produces hydrogen gas, which is visible as bubbles."
+  },
+  {
+    "question": "When an acid reacts with a carbonate, the products are:",
+    "options": [
+      "a) Salt, water, and carbon dioxide",
+      "b) Salt and hydrogen gas",
+      "c) Water and oxygen",
+      "d) Salt and water"
+    ],
+    "answer": "a",
+    "explanation": "Acid-carbonate reactions produce salt, water, and carbon dioxide gas."
+  },
+  {
+    "question": "Which of the following will react with hydrochloric acid to produce carbon dioxide?",
+    "options": [
+      "a) Calcium carbonate",
+      "b) Sodium chloride",
+      "c) Magnesium",
+      "d) Zinc"
+    ],
+    "answer": "a",
+    "explanation": "When calcium carbonate reacts with hydrochloric acid, carbon dioxide is produced."
+  },
+  {
+    "question": "What is observed when a carbonate reacts with an acid?",
+    "options": [
+      "a) Bubbling due to carbon dioxide gas",
+      "b) No visible reaction",
+      "c) Color change only",
+      "d) Precipitate formation"
+    ],
+    "answer": "a",
+    "explanation": "The release of carbon dioxide gas causes bubbling when a carbonate reacts with an acid."
+  },
+  {
+    "question": "Which acid will react with a carbonate to produce a salt, water, and carbon dioxide?",
+    "options": [
+      "a) Sulfuric acid",
+      "b) Nitric acid",
+      "c) Acetic acid",
+      "d) All of the above"
+    ],
+    "answer": "d",
+    "explanation": "Sulfuric acid, nitric acid, and acetic acid will all react with a carbonate to produce salt, water, and carbon dioxide."
+  },
+  {
+    "question": "Which of these reactions will produce carbon dioxide gas?",
+    "options": [
+      "a) Calcium carbonate with hydrochloric acid",
+      "b) Sodium hydroxide with sulfuric acid",
+      "c) Zinc with acetic acid",
+      "d) Magnesium with hydrochloric acid"
+    ],
+    "answer": "a",
+    "explanation": "This reaction produces carbon dioxide gas."
+  },
+  {
+    "question": "Which law explains why a stationary object remains at rest?",
+    "options": [
+      "a) Newton's First Law",
+      "b) Newton's Second Law",
+      "c) Newton's Third Law",
+      "d) Law of Universal Gravitation"
+    ],
+    "answer": "a",
+    "explanation": "Newton's First Law explains that a stationary object remains at rest due to balanced forces."
+  },
+  {
+    "question": "In a food chain, the top predator is also known as:",
+    "options": [
+      "a) Apex predator",
+      "b) Primary consumer",
+      "c) Producer",
+      "d) Herbivore"
+    ],
+    "answer": "a",
+    "explanation": "The apex predator is the top predator in a food chain."
+  },
+  {
+    "question": "In a valid experiment, which of the following should be controlled?",
+    "options": [
+      "a) Controlled variables",
+      "b) Independent variable",
+      "c) Dependent variable",
+      "d) Random variables"
+    ],
+    "answer": "a",
+    "explanation": "To ensure a valid experiment, controlled variables must be kept constant."
+  },
+  {
+    "question": "Which pair of DNA bases always pairs together?",
+    "options": [
+      "a) Adenine-Thymine",
+      "b) Guanine-Thymine",
+      "c) Adenine-Cytosine",
+      "d) Thymine-Cytosine"
+    ],
+    "answer": "a",
+    "explanation": "Adenine pairs with thymine in DNA, following the base pairing rule."
+  },
+  {
+    "question": "Which of the following contributes to climate change?",
+    "options": [
+      "a) Burning fossil fuels",
+      "b) Planting trees",
+      "c) Recycling",
+      "d) Using solar energy"
+    ],
+    "answer": "a",
+    "explanation": "Burning fossil fuels releases carbon dioxide, contributing to global warming and climate change."
+  },
+  {
+    "question": "What is formed when an acid reacts with a base?",
+    "options": [
+      "a) Salt and water",
+      "b) Gas and water",
+      "c) Water only",
+      "d) Salt only"
+    ],
+    "answer": "a",
+    "explanation": "The reaction between an acid and a base produces salt and water."
+  },
+  {
+    "question": "What happens when a metal reacts with an acid?",
+    "options": [
+      "a) Salt and hydrogen gas are produced",
+      "b) Water is produced",
+      "c) No reaction occurs",
+      "d) Metal melts"
+    ],
+    "answer": "a",
+    "explanation": "Metal-acid reactions produce salt and hydrogen gas."
+  },
+  {
+    "question": "Which gas is produced when a carbonate reacts with an acid?",
+    "options": [
+      "a) Carbon dioxide",
+      "b) Hydrogen",
+      "c) Oxygen",
+      "d) Nitrogen"
+    ],
+    "answer": "a",
+    "explanation": "Carbon dioxide is the gas produced when a carbonate reacts with an acid."
+  },
+  {
+    "question": "What is the effect of deforestation on carbon dioxide levels?",
+    "options": [
+      "a) Increases carbon dioxide levels",
+      "b) Decreases carbon dioxide levels",
+      "c) No effect",
+      "d) Increases oxygen levels"
+    ],
+    "answer": "a",
+    "explanation": "Deforestation reduces the number of trees that absorb carbon dioxide, increasing atmospheric levels."
+  },
+  {
+    "question": "What type of reaction occurs when an acid reacts with a carbonate?",
+    "options": [
+      "a) Neutralization",
+      "b) Combustion",
+      "c) Precipitation",
+      "d) Decomposition"
+    ],
+    "answer": "a",
+    "explanation": "The reaction between an acid and a carbonate is a type of neutralization reaction."
+  }
+]
