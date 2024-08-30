@@ -94,6 +94,16 @@
     </div>
 
     <script>
+        let quiz = [];
+
+        // Function to fetch quiz data from JSON file
+        function fetchQuizData() {
+            return fetch('quizData.json')
+                .then(response => response.json())
+                .then(data => {
+                    quiz = data;
+                });
+        }
 
         // Function to show the quiz and hide the title page
         function startQuiz() {
@@ -104,6 +114,10 @@
 
         // Function to load a new question
         function loadQuestion() {
+            if (quiz.length === 0) {
+                document.getElementById('question').innerText = "Loading questions...";
+                return;
+            }
             const randomIndex = Math.floor(Math.random() * quiz.length);
             const questionData = quiz[randomIndex];
 
@@ -138,8 +152,10 @@
             document.getElementById('next-button').style.display = 'block';
         }
 
-        // Initial load of the title page
-        document.getElementById('title-page').style.display = 'block';
+        // Fetch quiz data and load the title page
+        fetchQuizData().then(() => {
+            document.getElementById('title-page').style.display = 'block';
+        });
     </script>
 </body>
 </html>
