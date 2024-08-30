@@ -52,9 +52,18 @@
             color: #555;
         }
 
-        #title-page button {
-            width: 50%;
-            margin: 0 auto;
+        #title-page .mode-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #title-page .mode-buttons button {
+            width: 45%;
+        }
+
+        #title-page .mode-description {
+            font-size: 14px;
+            color: #666;
         }
 
         /* Styling for the quiz container */
@@ -68,6 +77,13 @@
             margin-top: 20px;
             color: #333;
         }
+
+        /* Styling for the score display */
+        #score-display {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -75,7 +91,12 @@
         <h1>Year 10 Yearly Exam Revision</h1>
         <p>No login. No scores. Just questions.</p>
         <p>Don't worry if some questions are unfamiliar. Each class covered content to a different depth. You'll be fine.</p>
-        <button onclick="startQuiz()">Start Quiz</button>
+        <div class="mode-buttons">
+            <button onclick="startQuiz('scored')">Scored Mode</button>
+            <button onclick="startQuiz('infinite')">Infinite Mode</button>
+        </div>
+        <p class="mode-description">Scored Mode: Answer 20 questions and get your score at the end.</p>
+        <p class="mode-description">Infinite Mode: Keep answering questions without any score or end.</p>
     </div>
 
     <div id="quiz-container">
@@ -90,11 +111,15 @@
             <!-- Feedback and Next Question button -->
             <p id="feedback"></p>
             <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+            <div id="score-display"></div>
         </div>
     </div>
 
     <script>
         let quiz = [];
+        let score = 0;
+        let questionCount = 0;
+        let quizMode = 'infinite'; // Default mode
 
         // Function to fetch quiz data from JSON file
         function fetchQuizData() {
@@ -106,7 +131,11 @@
         }
 
         // Function to show the quiz and hide the title page
-        function startQuiz() {
+        function startQuiz(mode) {
+            quizMode = mode;
+            score = 0;
+            questionCount = 0;
+
             document.getElementById('title-page').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';
             loadQuestion();
@@ -118,6 +147,12 @@
                 document.getElementById('question').innerText = "Loading questions...";
                 return;
             }
+
+            if (quizMode === 'scored' && questionCount >= 20) {
+                endQuiz();
+                return;
+            }
+
             const randomIndex = Math.floor(Math.random() * quiz.length);
             const questionData = quiz[randomIndex];
 
@@ -134,6 +169,8 @@
 
             document.getElementById('feedback').innerText = "";
             document.getElementById('next-button').style.display = 'none';
+
+            questionCount++;
         }
 
         // Function to check the selected answer
@@ -141,6 +178,7 @@
             const selectedLetter = String.fromCharCode(97 + selectedIndex); // Get 'a', 'b', 'c', 'd'
             if (selectedLetter === questionData.answer) {
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+                score++;
             } else {
                 document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.answer + ". " + questionData.explanation;
             }
@@ -150,6 +188,17 @@
 
             // Show the "Next Question" button
             document.getElementById('next-button').style.display = 'block';
+
+            if (quizMode === 'scored') {
+                document.getElementById('score-display').innerText = `Score: ${score}/${questionCount}`;
+            }
+        }
+
+        // Function to end the quiz in scored mode
+        function endQuiz() {
+            document.getElementById('question-container').innerHTML = `<h2>Quiz Complete!</h2><p>Your final score is ${score} out of 20.</p>`;
+            document.getElementById('next-button').style.display = 'none';
+            document.getElementById('score-display').style.display = 'none';
         }
 
         // Fetch quiz data and load the title page
