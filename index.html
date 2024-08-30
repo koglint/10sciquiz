@@ -69,6 +69,7 @@
         /* Styling for the quiz container */
         #quiz-container {
             display: none;
+            position: relative;
         }
 
         /* Feedback message styling */
@@ -78,18 +79,49 @@
             color: #333;
         }
 
-        /* Styling for the score display */
-        #score-display {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #333;
+        /* Styling for the home button */
+        #home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #home-button:hover {
+            background-color: #555;
+        }
+
+        /* Styling for the progress bar */
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        #progress-bar {
+            height: 20px;
+            background-color: #4caf50;
+            width: 0%;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div id="title-page">
         <h1>Year 10 Yearly Exam Revision</h1>
-        <p>No login. Just questions.</p>
+        <p>No login. No scores. Just questions.</p>
         <p>Don't worry if some questions are unfamiliar. Each class covered content to a different depth. You'll be fine.</p>
         <div class="mode-buttons">
             <button onclick="startQuiz('scored')">Scored Mode</button>
@@ -100,7 +132,11 @@
     </div>
 
     <div id="quiz-container">
+        <button id="home-button" onclick="returnToHome()">Home</button>
         <h1>Quiz</h1>
+        <div id="progress-bar-container">
+            <div id="progress-bar">0%</div>
+        </div>
         <div id="question-container">
             <p id="question"></p>
             <!-- Answer buttons -->
@@ -111,7 +147,6 @@
             <!-- Feedback and Next Question button -->
             <p id="feedback"></p>
             <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
-            <div id="score-display"></div>
         </div>
     </div>
 
@@ -138,6 +173,7 @@
 
             document.getElementById('title-page').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('progress-bar-container').style.display = (mode === 'scored') ? 'block' : 'none';
             loadQuestion();
         }
 
@@ -171,6 +207,10 @@
             document.getElementById('next-button').style.display = 'none';
 
             questionCount++;
+
+            if (quizMode === 'scored') {
+                updateProgressBar();
+            }
         }
 
         // Function to check the selected answer
@@ -188,17 +228,27 @@
 
             // Show the "Next Question" button
             document.getElementById('next-button').style.display = 'block';
-
-            if (quizMode === 'scored') {
-                document.getElementById('score-display').innerText = `Score: ${score}/${questionCount}`;
-            }
         }
 
         // Function to end the quiz in scored mode
         function endQuiz() {
             document.getElementById('question-container').innerHTML = `<h2>Quiz Complete!</h2><p>Your final score is ${score} out of 20.</p>`;
             document.getElementById('next-button').style.display = 'none';
-            document.getElementById('score-display').style.display = 'none';
+            document.getElementById('progress-bar-container').style.display = 'none';
+        }
+
+        // Function to update the progress bar
+        function updateProgressBar() {
+            const progress = (questionCount / 20) * 100;
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = `${progress}%`;
+            progressBar.innerText = `${questionCount}/20`;
+        }
+
+        // Function to return to the home page
+        function returnToHome() {
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('title-page').style.display = 'block';
         }
 
         // Fetch quiz data and load the title page
