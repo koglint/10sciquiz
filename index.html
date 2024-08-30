@@ -72,6 +72,12 @@
             position: relative;
         }
 
+        /* Header Styling */
+        #quiz-container h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
         /* Feedback message styling */
         #feedback {
             font-weight: bold;
@@ -115,6 +121,11 @@
             color: white;
             line-height: 20px;
             font-size: 14px;
+        }
+
+        /* Question container adjustments */
+        #question-container {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -167,10 +178,8 @@
 
         // Function to show the quiz and hide the title page
         function startQuiz(mode) {
+            resetQuiz();
             quizMode = mode;
-            score = 0;
-            questionCount = 0;
-
             document.getElementById('title-page').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';
             document.getElementById('progress-bar-container').style.display = (mode === 'scored') ? 'block' : 'none';
@@ -247,8 +256,24 @@
             progressBar.innerText = `${questionCount}/20`;
         }
 
+        // Function to reset quiz state
+        function resetQuiz() {
+            score = 0;
+            questionCount = 0;
+            document.getElementById('question-container').innerHTML = `
+                <p id="question"></p>
+                <button class="answer-button">A</button>
+                <button class="answer-button">B</button>
+                <button class="answer-button">C</button>
+                <button class="answer-button">D</button>
+                <p id="feedback"></p>
+                <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+            `;
+        }
+
         // Function to return to the home page
         function returnToHome() {
+            resetQuiz();
             document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('title-page').style.display = 'block';
         }
