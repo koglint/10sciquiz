@@ -168,7 +168,6 @@
         let score = 0;
         let questionCount = 0;
         let quizMode = 'infinite'; // Default mode
-        let currentQuestion = null; // To track the current question
 
         // Function to fetch quiz data from JSON file
         function fetchQuizData() {
@@ -202,24 +201,8 @@
             }
 
             const randomIndex = Math.floor(Math.random() * quiz.length);
-            currentQuestion = quiz[randomIndex]; // Save the current question
+            const questionData = quiz[randomIndex];
 
-            displayQuestion(currentQuestion);
-
-            questionCount++;
-
-            if (quizMode === 'scored') {
-                updateProgressBar();
-            }
-        }
-
-        // Function to reload the same question if the answer was incorrect
-        function loadSameQuestion() {
-            displayQuestion(currentQuestion); // Reload the same question
-        }
-
-        // Function to display the question and options
-        function displayQuestion(questionData) {
             document.getElementById('question').innerText = questionData.question;
 
             const answerButtons = document.querySelectorAll('.answer-button');
@@ -233,6 +216,12 @@
 
             document.getElementById('feedback').innerText = "";
             document.getElementById('next-button').style.display = 'none';
+
+            questionCount++;
+
+            if (quizMode === 'scored') {
+                updateProgressBar();
+            }
         }
 
         // Function to check the selected answer
@@ -241,15 +230,14 @@
             if (selectedLetter === questionData.answer) {
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
                 score++;
-                document.getElementById('next-button').style.display = 'block'; // Proceed to the next question
             } else {
-                document.getElementById('feedback').innerText = "Incorrect! Try again. The correct answer is " + questionData.answer + ". " + questionData.explanation;
-                loadSameQuestion(); // Reload the same question
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.answer + ". " + questionData.explanation;
             }
 
             // Disable buttons after selection
             document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
+            // Show the "Next Question" button if it's not the last question
             if (!(quizMode === 'scored' && questionCount === 20)) {
                 document.getElementById('next-button').style.display = 'block';
             } else {
@@ -259,7 +247,7 @@
 
         // Function to end the quiz in scored mode
         function endQuiz() {
-            document.getElementById('question-container').innerHTML = `<h2>Quiz Complete!</h2><p>Your final score is ${score} out of 20.</p>`;
+            document.getElementById('question-container').innerHTML = <h2>Quiz Complete!</h2><p>Your final score is ${score} out of 20.</p>;
             document.getElementById('next-button').style.display = 'none';
             document.getElementById('progress-bar-container').style.display = 'none';
         }
@@ -268,15 +256,15 @@
         function updateProgressBar() {
             const progress = (questionCount / 20) * 100;
             const progressBar = document.getElementById('progress-bar');
-            progressBar.style.width = `${progress}%`;
-            progressBar.innerText = `${questionCount}/20`;
+            progressBar.style.width = ${progress}%;
+            progressBar.innerText = ${questionCount}/20;
         }
 
         // Function to reset quiz state
         function resetQuiz() {
             score = 0;
             questionCount = 0;
-            document.getElementById('question-container').innerHTML = `
+            document.getElementById('question-container').innerHTML = 
                 <p id="question"></p>
                 <button class="answer-button">A</button>
                 <button class="answer-button">B</button>
@@ -284,7 +272,7 @@
                 <button class="answer-button">D</button>
                 <p id="feedback"></p>
                 <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
-            `;
+            ;
         }
 
         // Function to return to the home page
