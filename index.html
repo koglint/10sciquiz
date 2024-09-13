@@ -253,12 +253,12 @@
 
             const answerButtons = document.querySelectorAll('.answer-button');
             answerButtons.forEach((btn, index) => {
-                btn.innerText = currentQuestion.options[index];  // Only show the answer text, without "a)", "b)", etc.
+                btn.innerText = options[index].text;  // Show only the answer text
                 btn.disabled = false;
                 btn.classList.remove('correct', 'incorrect'); // Reset classes
 
                 btn.onclick = function() {
-                    checkAnswer(options[index].key, currentQuestion, btn);
+                    checkAnswer(options[index].key, currentQuestion, btn); // Pass the original key
                 };
             });
 
@@ -274,17 +274,22 @@
         function checkAnswer(selectedKey, questionData, selectedButton) {
             const answerButtons = document.querySelectorAll('.answer-button');
 
-            if (selectedKey === questionData.answer) {
+            // Get the correct answer's key
+            const correctKey = questionData.answer;
+
+            // Check if the selected answer is correct
+            if (selectedKey === correctKey) {
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
                 selectedButton.classList.add('correct'); // Highlight correct answer in green
                 score++;
                 currentQuestion = {}; // Clear current question to move to the next
             } else {
-                document.getElementById('feedback').innerText = "Incorrect! " + questionData.explanation;
+                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + correctKey + ". " + questionData.explanation;
                 selectedButton.classList.add('incorrect'); // Highlight selected wrong answer in red
+
                 // Highlight the correct answer in green
-                answerButtons.forEach(btn => {
-                    if (btn.innerText === questionData.options[questionData.answer]) {
+                answerButtons.forEach((btn, index) => {
+                    if (options[index].key === correctKey) {
                         btn.classList.add('correct');
                     }
                 });
