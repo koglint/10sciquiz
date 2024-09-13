@@ -183,7 +183,7 @@
             <button class="answer-button">D</button>
             <!-- Feedback and Next Question button -->
             <p id="feedback"></p>
-            <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+            <button id="next-button" style="display: none;" onclick="handleNext()">Next Question</button>
         </div>
     </div>
 
@@ -193,6 +193,7 @@
         let questionCount = 0;
         let quizMode = 'infinite'; // Default mode
         let currentQuestion = {}; // Store the current question
+        let questionAnsweredCorrectly = false; // Track if the question was answered correctly
 
         // Shuffle function
         function shuffle(array) {
@@ -234,8 +235,8 @@
                 return;
             }
 
-            // If the answer was correct, move to the next question, otherwise repeat the same question
-            if (!currentQuestion.question) {
+            // Load a new question if the last one was answered correctly
+            if (questionAnsweredCorrectly || !currentQuestion.question) {
                 const randomIndex = Math.floor(Math.random() * quiz.length);
                 currentQuestion = quiz[randomIndex];
                 questionCount++;
@@ -265,6 +266,7 @@
 
             document.getElementById('feedback').innerText = "";
             document.getElementById('next-button').style.display = 'none';
+            questionAnsweredCorrectly = false; // Reset correctness flag
 
             if (quizMode === 'scored') {
                 updateProgressBar();
@@ -283,7 +285,7 @@
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
                 selectedButton.classList.add('correct'); // Highlight correct answer in green
                 score++;
-                currentQuestion = {}; // Clear current question to move to the next
+                questionAnsweredCorrectly = true; // Mark as answered correctly
             } else {
                 document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + correctKey + ". " + questionData.explanation;
                 selectedButton.classList.add('incorrect'); // Highlight selected wrong answer in red
@@ -301,6 +303,14 @@
 
             // Always show the "Next Question" button after an answer is selected
             document.getElementById('next-button').style.display = 'block';
+        }
+
+        // Function to handle the "Next Question" button click
+        function handleNext() {
+            if (questionAnsweredCorrectly) {
+                currentQuestion = {}; // Clear current question to move to the next
+            }
+            loadQuestion(); // Reload the question or load a new one based on correctness
         }
 
         // Function to end the quiz in scored mode
@@ -330,7 +340,7 @@
                 <button class="answer-button">C</button>
                 <button class="answer-button">D</button>
                 <p id="feedback"></p>
-                <button id="next-button" style="display: none;" onclick="loadQuestion()">Next Question</button>
+                <button id="next-button" style="display: none;" onclick="handleNext()">Next Question</button>
             `;
         }
 
