@@ -13,6 +13,7 @@
             margin: auto;
             background-color: #f4f4f4;
             color: #333;
+            position: relative;
         }
 
         /* Styling for buttons */
@@ -78,6 +79,7 @@
             font-size: 28px;
             width: 100%;
             text-align: center;
+            margin-top: 50px;
         }
 
         /* Feedback message styling */
@@ -85,13 +87,14 @@
             font-weight: bold;
             margin-top: 20px;
             color: #333;
+            text-align: center;
         }
 
         /* Styling for the home button */
         #home-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
             background-color: #333;
             color: white;
             padding: 10px;
@@ -128,6 +131,26 @@
         /* Question container adjustments */
         #question-container {
             margin-top: 20px;
+        }
+
+        /* Styling for answer buttons */
+        .answer-button.correct {
+            background-color: green !important;
+            color: white;
+        }
+
+        .answer-button.incorrect {
+            background-color: red !important;
+            color: white;
+        }
+
+        /* Align elements properly */
+        body {
+            padding-bottom: 50px;
+        }
+
+        #quiz-container {
+            padding-top: 30px;
         }
     </style>
 </head>
@@ -231,8 +254,10 @@
             answerButtons.forEach((btn, index) => {
                 btn.innerText = options[index].text;
                 btn.disabled = false;
+                btn.classList.remove('correct', 'incorrect'); // Reset classes
+
                 btn.onclick = function() {
-                    checkAnswer(options[index].key, currentQuestion);
+                    checkAnswer(options[index].key, currentQuestion, btn);
                 };
             });
 
@@ -245,15 +270,23 @@
         }
 
         // Function to check the selected answer
-        function checkAnswer(selectedKey, questionData) {
+        function checkAnswer(selectedKey, questionData, selectedButton) {
             const answerButtons = document.querySelectorAll('.answer-button');
 
             if (selectedKey === questionData.answer) {
                 document.getElementById('feedback').innerText = "Correct! " + questionData.explanation;
+                selectedButton.classList.add('correct'); // Highlight correct answer in green
                 score++;
                 currentQuestion = {}; // Clear current question to move to the next
             } else {
                 document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.answer + ". " + questionData.explanation;
+                selectedButton.classList.add('incorrect'); // Highlight selected wrong answer in red
+                // Highlight the correct answer in green
+                answerButtons.forEach(btn => {
+                    if (btn.innerText === questionData.options[questionData.answer]) {
+                        btn.classList.add('correct');
+                    }
+                });
             }
 
             // Disable buttons after selection
