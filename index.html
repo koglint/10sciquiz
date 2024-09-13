@@ -260,7 +260,7 @@
                 btn.classList.remove('correct', 'incorrect'); // Reset classes
 
                 btn.onclick = function() {
-                    checkAnswer(options[index].key, currentQuestion, btn); // Pass the original key
+                    checkAnswer(options[index].key, currentQuestion, btn, options); // Pass the options array
                 };
             });
 
@@ -274,7 +274,7 @@
         }
 
         // Function to check the selected answer
-        function checkAnswer(selectedKey, questionData, selectedButton) {
+        function checkAnswer(selectedKey, questionData, selectedButton, options) {
             const answerButtons = document.querySelectorAll('.answer-button');
 
             // Get the correct answer's key
