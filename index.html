@@ -222,7 +222,7 @@
             loadQuestion();
         }
 
-        // Function to load a new question
+        // Function to load a new question or repeat the current one if incorrect
         function loadQuestion() {
             if (quiz.length === 0) {
                 document.getElementById('question').innerText = "Loading questions...";
@@ -234,10 +234,11 @@
                 return;
             }
 
-            // If repeating the question, don't get a new one
+            // If the answer was correct, move to the next question, otherwise repeat the same question
             if (!currentQuestion.question) {
                 const randomIndex = Math.floor(Math.random() * quiz.length);
                 currentQuestion = quiz[randomIndex];
+                questionCount++;
             }
 
             document.getElementById('question').innerText = currentQuestion.question;
