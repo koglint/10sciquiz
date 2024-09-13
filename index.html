@@ -279,7 +279,7 @@
                 score++;
                 currentQuestion = {}; // Clear current question to move to the next
             } else {
-                document.getElementById('feedback').innerText = "Incorrect! The correct answer is " + questionData.answer + ". " + questionData.explanation;
+                document.getElementById('feedback').innerText = "Incorrect! " + questionData.explanation;
                 selectedButton.classList.add('incorrect'); // Highlight selected wrong answer in red
                 // Highlight the correct answer in green
                 answerButtons.forEach(btn => {
