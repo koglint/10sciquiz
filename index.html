@@ -253,7 +253,7 @@
 
             const answerButtons = document.querySelectorAll('.answer-button');
             answerButtons.forEach((btn, index) => {
-                btn.innerText = options[index].text;
+                btn.innerText = currentQuestion.options[index];  // Only show the answer text, without "a)", "b)", etc.
                 btn.disabled = false;
                 btn.classList.remove('correct', 'incorrect'); // Reset classes
 
