@@ -298,12 +298,8 @@
             // Disable buttons after selection
             document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
-            // Show the "Next Question" button if it's not the last question
-            if (!(quizMode === 'scored' && questionCount === 20)) {
-                document.getElementById('next-button').style.display = 'block';
-            } else {
-                endQuiz();  // End quiz immediately after the last question is answered
-            }
+            // Always show the "Next Question" button after an answer is selected
+            document.getElementById('next-button').style.display = 'block';
         }
 
         // Function to end the quiz in scored mode
